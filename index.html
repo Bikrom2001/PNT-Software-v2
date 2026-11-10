@@ -1,0 +1,1111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>People N Tech</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/Image/favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/Image/favicon.png" />
+
+    <!-- Tailwind CSS v4 Browser CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Bootstrap Icons & Plus Jakarta Sans Font -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Header & Navigation Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-white text-pt-text font-sans antialiased min-h-screen">
+    <!-- =====================================================
+       HEADER (Top Information Bar + Main Navigation)
+       ===================================================== -->
+    <header class="pt-header" id="ptHeader">
+      <!-- Top Information Bar (Modern Crisp Light Theme) -->
+      <div
+        class="hidden sm:block h-[42px] bg-gradient-to-r from-[#f4f8fb] via-[#ebf4fa] to-[#f4f8fb] text-xs border-b border-[#e2edf6]"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between"
+        >
+          <!-- Left: Contact Quick Links with Micro-Icons -->
+          <div class="flex items-center gap-5">
+            <a
+              href="mailto:info@peoplentech.net"
+              class="group inline-flex items-center gap-2 text-slate-700 hover:text-pt-blue-ink transition-colors"
+            >
+              <span
+                class="w-6 h-6 rounded-md bg-white border border-slate-200/90 shadow-2xs flex items-center justify-center text-pt-blue-ink group-hover:bg-pt-blue group-hover:border-pt-blue group-hover:text-white transition-all duration-200"
+              >
+                <i class="bi bi-envelope text-[11px]"></i>
+              </span>
+              <span class="font-semibold tracking-wide">info@peoplentech.net</span>
+            </a>
+            <a
+              href="tel:01611446699"
+              class="group inline-flex items-center gap-2 text-slate-700 hover:text-pt-blue-ink transition-colors"
+            >
+              <span
+                class="w-6 h-6 rounded-md bg-white border border-slate-200/90 shadow-2xs flex items-center justify-center text-pt-blue-ink group-hover:bg-pt-blue group-hover:border-pt-blue group-hover:text-white transition-all duration-200"
+              >
+                <i class="bi bi-telephone text-[11px]"></i>
+              </span>
+              <span class="font-semibold tracking-wide">01611-446699</span>
+            </a>
+          </div>
+
+          <!-- Right: Sleek Modern Social Icons with Light Cards & Brand Glow -->
+          <div class="flex items-center gap-2">
+            <a
+              href="#"
+              aria-label="Facebook"
+              title="Facebook"
+              class="w-[30px] h-[30px] rounded-lg bg-white border border-slate-200/90 text-slate-600 flex items-center justify-center text-xs shadow-2xs hover:bg-[#1877f2] hover:text-white hover:border-[#1877f2] hover:shadow-md hover:shadow-[#1877f2]/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/peoplentech-softwarepoint/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              class="w-[30px] h-[30px] rounded-lg bg-white border border-slate-200/90 text-slate-600 flex items-center justify-center text-xs shadow-2xs hover:bg-[#0a66c2] hover:text-white hover:border-[#0a66c2] hover:shadow-md hover:shadow-[#0a66c2]/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Twitter / X"
+              title="Twitter / X"
+              class="w-[30px] h-[30px] rounded-lg bg-white border border-slate-200/90 text-slate-600 flex items-center justify-center text-xs shadow-2xs hover:bg-slate-900 hover:text-white hover:border-slate-900 hover:shadow-md hover:shadow-slate-900/25 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="YouTube"
+              title="YouTube"
+              class="w-[30px] h-[30px] rounded-lg bg-white border border-slate-200/90 text-slate-600 flex items-center justify-center text-xs shadow-2xs hover:bg-[#ff0000] hover:text-white hover:border-[#ff0000] hover:shadow-md hover:shadow-red-500/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Navigation Bar -->
+      <nav
+        class="bg-white border-b border-pt-line"
+        aria-label="Main navigation"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-navbar-inner flex items-center justify-between relative"
+        >
+          <!-- Brand Logo -->
+          <a
+            href="#"
+            class="flex items-center shrink-0 mr-4 lg:mr-8"
+            aria-label="People N Tech home"
+          >
+            <img src="assets/Image/logo.png" alt="People N Tech" class="pt-brand-logo" />
+          </a>
+
+          <!-- Tablet / Mobile Controls (< 992px) -->
+          <div class="flex items-center gap-3 lg:hidden">
+            <a
+              href="#"
+              class="inline-flex items-center justify-center px-3.5 py-1.5 rounded-lg bg-pt-orange hover:bg-pt-orange-dark text-white text-xs sm:text-sm font-bold shadow-sm transition-colors"
+            >
+              Get a Quote
+            </a>
+            <button
+              id="ptOpenMenu"
+              type="button"
+              aria-label="Open menu"
+              aria-controls="ptMenu"
+              aria-expanded="false"
+              class="w-10 h-10 grid place-items-center rounded-xl border border-pt-line bg-white text-pt-navy hover:bg-pt-tint hover:border-pt-blue text-xl transition-colors cursor-pointer"
+            >
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+
+          <!-- Desktop Navigation Links (>= 992px) -->
+          <ul
+            class="hidden lg:flex items-center h-full mx-auto list-none m-0 p-0"
+          >
+            <!-- Home -->
+            <li class="h-full flex items-center">
+              <a href="#" class="pt-nav-link active" aria-current="page"
+                >Home</a
+              >
+            </li>
+
+            <!-- Services (Wide Mega Menu) -->
+            <li class="pt-dropdown h-full">
+              <button
+                type="button"
+                class="pt-nav-link pt-dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <span>Services</span>
+                <i class="bi bi-chevron-down pt-chevron"></i>
+              </button>
+              <div class="pt-menu pt-menu--wide">
+                <div>
+                  <div class="grid grid-cols-2 gap-1">
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon">
+                        <i class="bi bi-code-slash"></i>
+                      </div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Web Development</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Fast, scalable websites and web apps</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon">
+                        <i class="bi bi-phone"></i>
+                      </div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Mobile Apps</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Android and iOS apps</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon">
+                        <i class="bi bi-vector-pen"></i>
+                      </div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >UI/UX Design</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Interfaces people enjoy using</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon"><i class="bi bi-cpu"></i></div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Software Development</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Custom software for your business</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon">
+                        <i class="bi bi-cloud-check"></i>
+                      </div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Cloud &amp; DevOps</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Deployment, hosting and automation</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon">
+                        <i class="bi bi-chat-square-text"></i>
+                      </div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >IT Consulting</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Plan the right technology</small
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <a
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-pt-blue-ink hover:text-pt-orange-dark mt-3 ml-2.5 transition-colors group"
+                    href="#"
+                  >
+                    <span>View all services</span>
+                    <i
+                      class="bi bi-arrow-right transition-transform group-hover:translate-x-1"
+                    ></i>
+                  </a>
+                </div>
+
+                <!-- Talk to our team sidebar -->
+                <aside
+                  class="flex flex-col gap-2 p-5 rounded-xl bg-pt-navy text-white"
+                >
+                  <h6 class="text-sm font-bold text-white mb-0.5">
+                    Talk to our team
+                  </h6>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-1">
+                    Tell us about your project and we will get back to you.
+                  </p>
+                  <a
+                    href="tel:01611446699"
+                    class="inline-flex items-center gap-2 text-xs text-slate-200 hover:text-pt-blue transition-colors"
+                  >
+                    <i class="bi bi-telephone text-pt-blue"></i
+                    ><span>01611-446699</span>
+                  </a>
+                  <a
+                    href="mailto:info@peoplentech.net"
+                    class="inline-flex items-center gap-2 text-xs text-slate-200 hover:text-pt-blue transition-colors"
+                  >
+                    <i class="bi bi-envelope text-pt-blue"></i
+                    ><span>info@peoplentech.net</span>
+                  </a>
+                </aside>
+              </div>
+            </li>
+
+            <!-- Industries (Wide Mega Menu) -->
+            <li class="pt-dropdown h-full">
+              <button
+                type="button"
+                class="pt-nav-link pt-dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <span>Industries</span>
+                <i class="bi bi-chevron-down pt-chevron"></i>
+              </button>
+              <div class="pt-menu pt-menu--wide">
+                <div>
+                  <div class="grid grid-cols-2 gap-1">
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                      </div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Healthcare</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Digital health, EHR &amp; clinic systems</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon"><i class="bi bi-bank"></i></div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Fintech</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Secure banking, payment &amp; financial tech</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon"><i class="bi bi-bag"></i></div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >E-commerce</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Online retail, multi-vendor &amp; POS systems</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon">
+                        <i class="bi bi-mortarboard"></i>
+                      </div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Education</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >LMS, e-learning platforms &amp; portals</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon"><i class="bi bi-truck"></i></div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Logistics</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Supply chain, fleet &amp; tracking systems</small
+                        >
+                      </div>
+                    </a>
+                    <a class="pt-item" href="#">
+                      <div class="pt-item-icon">
+                        <i class="bi bi-buildings"></i>
+                      </div>
+                      <div>
+                        <strong class="block text-sm font-semibold text-pt-navy"
+                          >Real Estate</strong
+                        >
+                        <small class="block text-xs text-pt-muted mt-0.5"
+                          >Property listing &amp; asset management tools</small
+                        >
+                      </div>
+                    </a>
+                  </div>
+                  <a
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-pt-blue-ink hover:text-pt-orange-dark mt-3 ml-2.5 transition-colors group"
+                    href="#"
+                  >
+                    <span>View all industries</span>
+                    <i
+                      class="bi bi-arrow-right transition-transform group-hover:translate-x-1"
+                    ></i>
+                  </a>
+                </div>
+
+                <!-- Industry Solutions sidebar card -->
+                <aside
+                  class="flex flex-col gap-2 p-5 rounded-xl bg-pt-navy text-white"
+                >
+                  <h6 class="text-sm font-bold text-white mb-0.5">
+                    Industry Solutions
+                  </h6>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-1">
+                    Tailored technology solutions designed for your specific industry domain.
+                  </p>
+                  <a
+                    href="tel:01611446699"
+                    class="inline-flex items-center gap-2 text-xs text-slate-200 hover:text-pt-blue transition-colors"
+                  >
+                    <i class="bi bi-telephone text-pt-blue"></i
+                    ><span>01611-446699</span>
+                  </a>
+                  <a
+                    href="mailto:info@peoplentech.net"
+                    class="inline-flex items-center gap-2 text-xs text-slate-200 hover:text-pt-blue transition-colors"
+                  >
+                    <i class="bi bi-envelope text-pt-blue"></i
+                    ><span>info@peoplentech.net</span>
+                  </a>
+                </aside>
+              </div>
+            </li>
+
+            <!-- Portfolio -->
+            <li class="h-full flex items-center">
+              <a href="#" class="pt-nav-link">Portfolio</a>
+            </li>
+
+            <!-- About (Small Dropdown) -->
+            <li class="pt-dropdown pt-dropdown--local h-full">
+              <button
+                type="button"
+                class="pt-nav-link pt-dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <span>About</span>
+                <i class="bi bi-chevron-down pt-chevron"></i>
+              </button>
+              <div class="pt-menu pt-menu--small">
+                <a class="pt-item" href="#">
+                  <div class="pt-item-icon"><i class="bi bi-building"></i></div>
+                  <div>
+                    <strong class="block text-sm font-semibold text-pt-navy"
+                      >Our Company</strong
+                    >
+                    <small class="block text-xs text-pt-muted mt-0.5"
+                      >Who we are and what we do</small
+                    >
+                  </div>
+                </a>
+                <a class="pt-item" href="#">
+                  <div class="pt-item-icon"><i class="bi bi-people"></i></div>
+                  <div>
+                    <strong class="block text-sm font-semibold text-pt-navy"
+                      >Our Team</strong
+                    >
+                    <small class="block text-xs text-pt-muted mt-0.5"
+                      >The people behind the work</small
+                    >
+                  </div>
+                </a>
+               
+              </div>
+            </li>
+
+            <!-- Contact -->
+            <li class="h-full flex items-center">
+              <a href="#" class="pt-nav-link">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop CTA Button -->
+          <a
+            href="#"
+            class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-pt-orange hover:bg-pt-orange-dark text-white text-sm font-bold shadow-sm hover:shadow-lg hover:shadow-orange-500/25 transition-all duration-200 group shrink-0"
+          >
+            <span>Get a Quote</span>
+            <i
+              class="bi bi-arrow-right transition-transform duration-200 group-hover:translate-x-1"
+            ></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =====================================================
+       MOBILE DRAWER & BACKDROP (< 992px)
+       ===================================================== -->
+    <div
+      id="ptBackdrop"
+      class="fixed inset-0 bg-black/40 backdrop-blur-sm z-[55] lg:hidden"
+      aria-hidden="true"
+    ></div>
+
+    <div
+      id="ptMenu"
+      class="fixed inset-y-0 right-0 w-[380px] max-w-[90vw] bg-white z-[60] shadow-2xl flex flex-col lg:hidden"
+      aria-label="Mobile navigation"
+      role="dialog"
+      aria-modal="true"
+    >
+      <!-- Mobile Drawer Head -->
+      <div
+        class="px-5 py-4 border-b border-pt-line flex items-center justify-between"
+      >
+        <img src="assets/Image/logo.png" alt="People N Tech" class="h-7 w-auto" />
+        <button
+          id="ptCloseMenu"
+          type="button"
+          aria-label="Close menu"
+          class="w-9 h-9 grid place-items-center rounded-xl border border-pt-line bg-white hover:bg-pt-tint hover:border-pt-blue text-pt-navy text-sm transition-colors cursor-pointer"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Drawer Body -->
+      <div class="flex-1 overflow-y-auto px-5 py-4 flex flex-col">
+        <nav class="flex flex-col divide-y divide-pt-line">
+          <!-- Mobile: Home -->
+          <div class="py-3">
+            <a
+              href="#"
+              class="pt-mobile-link text-base font-semibold text-pt-navy hover:text-pt-blue-ink block active"
+              aria-current="page"
+              >Home</a
+            >
+          </div>
+
+          <!-- Mobile: Services Accordion -->
+          <div class="py-3">
+            <button
+              type="button"
+              class="pt-mobile-toggle flex items-center justify-between w-full text-base font-semibold text-pt-navy hover:text-pt-blue-ink cursor-pointer"
+              data-collapse-target="ptMobileServices"
+              aria-expanded="false"
+            >
+              <span>Services</span>
+              <i class="bi bi-chevron-down pt-chevron text-xs"></i>
+            </button>
+            <div id="ptMobileServices" class="pt-mobile-collapse">
+              <div class="pt-2 pl-2 space-y-1">
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-code-slash"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">Web Development</strong>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">Mobile Apps</strong>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-vector-pen"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">UI/UX Design</strong>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-cpu"></i>
+                  </div>
+                  <strong class="text-sm font-semibold"
+                    >Software Development</strong
+                  >
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-cloud-check"></i>
+                  </div>
+                  <strong class="text-sm font-semibold"
+                    >Cloud &amp; DevOps</strong
+                  >
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-chat-square-text"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">IT Consulting</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile: Industries Accordion -->
+          <div class="py-3">
+            <button
+              type="button"
+              class="pt-mobile-toggle flex items-center justify-between w-full text-base font-semibold text-pt-navy hover:text-pt-blue-ink cursor-pointer"
+              data-collapse-target="ptMobileIndustries"
+              aria-expanded="false"
+            >
+              <span>Industries</span>
+              <i class="bi bi-chevron-down pt-chevron text-xs"></i>
+            </button>
+            <div id="ptMobileIndustries" class="pt-mobile-collapse">
+              <div class="pt-2 pl-2 space-y-1">
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-heart-pulse"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">Healthcare</strong>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-bank"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">Fintech</strong>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-bag"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">E-commerce</strong>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-mortarboard"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">Education</strong>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-truck"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">Logistics</strong>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-base">
+                    <i class="bi bi-buildings"></i>
+                  </div>
+                  <strong class="text-sm font-semibold">Real Estate</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile: Portfolio -->
+          <div class="py-3">
+            <a
+              href="#"
+              class="pt-mobile-link text-base font-semibold text-pt-navy hover:text-pt-blue-ink block"
+              >Portfolio</a
+            >
+          </div>
+
+          <!-- Mobile: About Accordion -->
+          <div class="py-3">
+            <button
+              type="button"
+              class="pt-mobile-toggle flex items-center justify-between w-full text-base font-semibold text-pt-navy hover:text-pt-blue-ink cursor-pointer"
+              data-collapse-target="ptMobileAbout"
+              aria-expanded="false"
+            >
+              <span>About</span>
+              <i class="bi bi-chevron-down pt-chevron text-xs"></i>
+            </button>
+            <div id="ptMobileAbout" class="pt-mobile-collapse">
+              <div class="pt-2 pl-2 space-y-1">
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-sm">
+                    <i class="bi bi-building"></i>
+                  </div>
+                  <div>
+                    <strong class="block text-xs font-semibold"
+                      >Our Company</strong
+                    >
+                    <small class="block text-xs text-pt-muted mt-0.5"
+                      >Who we are and what we do</small
+                    >
+                  </div>
+                </a>
+                <a href="#" class="pt-item py-2">
+                  <div class="pt-item-icon w-8 h-8 text-sm">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div>
+                    <strong class="block text-xs font-semibold"
+                      >Our Team</strong
+                    >
+                    <small class="block text-xs text-pt-muted mt-0.5"
+                      >The people behind the work</small
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile: Contact -->
+          <div class="py-3">
+            <a
+              href="#"
+              class="pt-mobile-link text-base font-semibold text-pt-navy hover:text-pt-blue-ink block"
+              >Contact</a
+            >
+          </div>
+        </nav>
+
+        <!-- Mobile CTA -->
+        <a
+          href="#"
+          class="mt-6 flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-pt-orange hover:bg-pt-orange-dark text-white font-bold text-sm shadow-md transition-colors"
+        >
+          <span>Get a Quote</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+
+        <!-- Mobile Drawer Footer -->
+        <div class="mt-auto pt-6 border-t border-pt-line flex flex-col gap-2.5">
+          <a
+            href="mailto:info@peoplentech.net"
+            class="inline-flex items-center gap-2 text-xs text-pt-muted hover:text-pt-blue transition-colors"
+          >
+            <i class="bi bi-envelope text-pt-blue"></i
+            ><span>info@peoplentech.net</span>
+          </a>
+          <a
+            href="tel:01611446699"
+            class="inline-flex items-center gap-2 text-xs text-pt-muted hover:text-pt-blue transition-colors"
+          >
+            <i class="bi bi-telephone text-pt-blue"></i
+            ><span>01611-446699</span>
+          </a>
+          <div class="flex items-center gap-2 mt-2">
+            <a
+              href="#"
+              aria-label="Facebook"
+              title="Facebook"
+              class="w-9 h-9 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center text-sm hover:bg-[#1877f2] hover:text-white hover:border-[#1877f2] hover:shadow-md hover:shadow-[#1877f2]/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/peoplentech-softwarepoint/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              class="w-9 h-9 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center text-sm hover:bg-[#0a66c2] hover:text-white hover:border-[#0a66c2] hover:shadow-md hover:shadow-[#0a66c2]/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Twitter / X"
+              title="Twitter / X"
+              class="w-9 h-9 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center text-sm hover:bg-black hover:text-white hover:border-black hover:shadow-md hover:shadow-black/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="YouTube"
+              title="YouTube"
+              class="w-9 h-9 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center text-sm hover:bg-[#ff0000] hover:text-white hover:border-[#ff0000] hover:shadow-md hover:shadow-red-500/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="GitHub"
+              title="GitHub"
+              class="w-9 h-9 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center text-sm hover:bg-[#24292f] hover:text-white hover:border-[#24292f] hover:shadow-md hover:shadow-black/40 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+       PAGE CONTENT DEMO (Scroll Area)
+       ===================================================== -->
+    <main
+      class="min-h-[50vh] py-20 sm:py-28 bg-gradient-to-b from-pt-tint/60 via-white to-slate-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- <div class="max-w-3xl">
+          <span
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pt-blue/10 text-pt-blue-ink text-xs font-bold tracking-wide uppercase mb-4"
+          >
+            <span class="w-2 h-2 rounded-full bg-pt-blue animate-pulse"></span>
+            Empowering Innovation Since 2014
+          </span>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-pt-navy tracking-tight leading-tight mb-6"
+          >
+            Smart Technology Solutions for Growing Businesses
+          </h1>
+          <p class="text-base sm:text-lg text-pt-muted leading-relaxed mb-8">
+            People N Tech delivers enterprise-grade software development, cloud computing, QA automation, and career-defining IT workforce training across North America and Asia.
+          </p>
+          <div class="flex flex-wrap items-center gap-4">
+            <a
+              href="#"
+              class="pt-btn-cta group relative inline-flex items-center gap-3 pl-6 pr-2.5 py-2.5 rounded-full text-white text-sm font-bold overflow-hidden shadow-lg shadow-orange-500/25"
+            >
+              <span
+                class="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-out pointer-events-none"
+              ></span>
+              <span class="tracking-wide">Explore Services</span>
+              <span
+                class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-white text-xs transition-all duration-300 group-hover:bg-white group-hover:text-pt-orange-dark group-hover:rotate-[-45deg]"
+              >
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+            <a
+              href="tel:01611446699"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-pt-line hover:border-pt-blue text-pt-navy text-sm font-bold shadow-2xs hover:bg-pt-tint transition-all"
+            >
+              <i class="bi bi-telephone text-pt-blue"></i>
+              <span>01611-446699</span>
+            </a>
+          </div>
+        </div> -->
+      </div>
+    </main>
+
+    <!-- =====================================================
+       FOOTER SECTION (Modern 2026 UI Design)
+       ===================================================== -->
+    <footer
+      class="relative bg-[#070e1b] text-slate-300 pt-16 pb-6 overflow-hidden border-t border-slate-800/80"
+    >
+      <!-- Ambient Brand Glow Orbs in Background -->
+      <div
+        class="absolute -top-40 right-1/4 w-96 h-96 bg-pt-blue/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute -bottom-20 left-1/4 w-96 h-96 bg-pt-orange/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <!-- Top Glowing Cyan-to-Orange Accent Line -->
+      <div
+        class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-pt-blue/40 to-transparent"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Main Footer Columns Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12"
+        >
+          <!-- Col 1: Brand Info & Socials (4 Cols) -->
+          <div class="lg:col-span-4 flex flex-col">
+            <!-- Logo in Clean Card -->
+            <a
+              href="#"
+              class="inline-flex items-center mb-5"
+              aria-label="People N Tech home"
+            >
+              <div
+                class="inline-flex items-center px-4 py-2 rounded-xl bg-white shadow-sm border border-slate-200/40"
+              >
+                <img src="assets/Image/logo.png" alt="People N Tech" class="h-7 w-auto" />
+              </div>
+            </a>
+
+            <!-- Mission Description -->
+            <p class="text-sm text-slate-300 leading-relaxed mb-5 pr-4">
+              Get Smart Solutions to all your problems. Empowering businesses through world-class technology, enterprise software, and industry-leading training since 2014.
+            </p>
+
+            <!-- Social Links (Modern Squircle Cards) -->
+            <div class="flex items-center gap-2">
+              <a
+                href="#"
+                aria-label="Facebook"
+                title="Facebook"
+                class="w-9 h-9 rounded-lg bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center justify-center text-sm hover:bg-[#1877f2] hover:text-white hover:border-[#1877f2] hover:shadow-md hover:shadow-[#1877f2]/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/peoplentech-softwarepoint/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                class="w-9 h-9 rounded-lg bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center justify-center text-sm hover:bg-[#0a66c2] hover:text-white hover:border-[#0a66c2] hover:shadow-md hover:shadow-[#0a66c2]/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Twitter / X"
+                title="Twitter / X"
+                class="w-9 h-9 rounded-lg bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center justify-center text-sm hover:bg-slate-900 hover:text-white hover:border-slate-900 hover:shadow-md hover:shadow-black/40 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+              >
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="YouTube"
+                title="YouTube"
+                class="w-9 h-9 rounded-lg bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center justify-center text-sm hover:bg-[#ff0000] hover:text-white hover:border-[#ff0000] hover:shadow-md hover:shadow-red-500/30 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+              >
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: OTHER SERVICES (2 Cols) -->
+          <div class="lg:col-span-2 lg:col-start-5">
+            <h4
+              class="text-xs font-bold uppercase tracking-widest text-slate-100 mb-5 flex items-center gap-2"
+            >
+              <i class="bi bi-grid-fill text-pt-blue text-xs"></i>
+              <span>Other Services</span>
+            </h4>
+            <ul class="space-y-3 list-none p-0 m-0">
+              <li>
+                <a
+                  href="https://peoplentech.com.bd/" target="_blank"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-blue transition-colors"
+                  ></i>
+                  <span>IT Training</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-blue transition-colors"
+                  ></i>
+                  <span>Branding &amp; Marketing</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.pntdns.com/" target="_blank"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-blue transition-colors"
+                  ></i>
+                  <span>PNT DNS</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.wust.edu/" target="_blank"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-blue transition-colors"
+                  ></i>
+                  <span>WUST</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-blue transition-colors"
+                  ></i>
+                  <span>QA Testing</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 3: COMPANY (2 Cols) -->
+          <div class="lg:col-span-2">
+            <h4
+              class="text-xs font-bold uppercase tracking-widest text-slate-100 mb-5 flex items-center gap-2"
+            >
+              <i class="bi bi-building-fill text-pt-orange text-xs"></i>
+              <span>Company</span>
+            </h4>
+            <ul class="space-y-3 list-none p-0 m-0">
+              <li>
+                <a
+                  href="#"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-orange transition-colors"
+                  ></i>
+                  <span>About Us</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-orange transition-colors"
+                  ></i>
+                  <span>Blog</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-orange transition-colors"
+                  ></i>
+                  <span class="flex items-center gap-1.5">
+                    <span>Careers</span>
+                    <span
+                      class="text-[9px] font-bold px-1.5 py-0.2 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30"
+                      >Hiring</span
+                    >
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-orange transition-colors"
+                  ></i>
+                  <span>Contact Us</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white hover:translate-x-1 transition-all duration-200"
+                >
+                  <i
+                    class="bi bi-chevron-right text-[10px] text-slate-600 group-hover:text-pt-orange transition-colors"
+                  ></i>
+                  <span>Privacy Policy</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Address & Contact information (4 Cols) -->
+          <div class="lg:col-span-4">
+            <h4
+              class="text-xs font-bold uppercase tracking-widest text-slate-100 mb-5 flex items-center gap-2"
+            >
+              <i class="bi bi-geo-alt-fill text-pt-blue text-xs"></i>
+              <span>Address &amp; Contact information</span>
+            </h4>
+            <div class="space-y-3">
+              <!-- Physical Address -->
+              <div
+                class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-colors"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-pt-blue/15 border border-pt-blue/30 text-pt-blue flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <i class="bi bi-geo-alt text-sm"></i>
+                </span>
+                <p class="text-xs text-slate-300 leading-relaxed m-0">
+                  151/7, Good Luck Center (7th &amp; 8th) Floor, Green Road, Dhaka - 1205, Bangladesh
+                </p>
+              </div>
+
+              <!-- Phone Number -->
+              <div
+                class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-colors"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-pt-orange/15 border border-pt-orange/30 text-pt-orange flex items-center justify-center shrink-0"
+                >
+                  <i class="bi bi-telephone text-sm"></i>
+                </span>
+                <div class="text-xs text-slate-300">
+                  <span class="text-slate-400">Phone Number: </span>
+                  <a
+                    href="tel:01611446699"
+                    class="text-slate-200 font-semibold hover:text-pt-orange transition-colors"
+                    >01611-446699</a
+                  >
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div
+                class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-colors"
+              >
+                <span
+                  class="w-8 h-8 rounded-lg bg-sky-500/15 border border-sky-500/30 text-sky-400 flex items-center justify-center shrink-0"
+                >
+                  <i class="bi bi-envelope text-sm"></i>
+                </span>
+                <div class="text-xs text-slate-300">
+                  <span class="text-slate-400">Email: </span>
+                  <a
+                    href="mailto:info@peoplentech.net"
+                    class="text-slate-200 font-semibold hover:text-pt-blue transition-colors"
+                    >info@peoplentech.net</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright Bar (Centered) -->
+        <div
+          class="border-t border-slate-800/80 pt-6 text-center text-xs font-medium text-slate-400 tracking-wider"
+        >
+          <p class="m-0 uppercase">&copy; 2026 <span class="text-pt-blue">PEOPLENTECH Software.</span> ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Navigation Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

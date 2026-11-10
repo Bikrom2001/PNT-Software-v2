@@ -1,0 +1,372 @@
+/* ==========================================================
+   People N Tech – Stylesheet (Tailwind CSS v4 Companion)
+   Brand Tokens, Utility Classes, Mega Menu & Offcanvas
+   ========================================================== */
+
+/* ---------- 1. Design Tokens ---------- */
+:root {
+  --pt-navy: #0b1220;
+  --pt-blue: #009fe3;
+  --pt-blue-ink: #007db8;
+  --pt-orange: #ff6b35;
+  --pt-orange-dark: #e9561f;
+  --pt-text: #0b1220;
+  --pt-muted: #5b667a;
+  --pt-line: #e4eaf2;
+  --pt-tint: #f2f8fc;
+
+  --pt-topbar-h: 40px;
+  --pt-nav-h: 76px;
+  --pt-logo-h: 36px;
+  --pt-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Tailwind v4 Theme directive (used by Tailwind CLI / Vite) */
+@theme {
+  --color-pt-navy: #0b1220;
+  --color-pt-blue: #009fe3;
+  --color-pt-blue-ink: #007db8;
+  --color-pt-orange: #ff6b35;
+  --color-pt-orange-dark: #e9561f;
+  --color-pt-text: #0b1220;
+  --color-pt-muted: #5b667a;
+  --color-pt-line: #e4eaf2;
+  --color-pt-tint: #f2f8fc;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* ---------- 2. Custom Brand Utility Classes ---------- */
+.bg-pt-navy {
+  background-color: var(--pt-navy);
+}
+.text-pt-navy {
+  color: var(--pt-navy);
+}
+
+.bg-pt-blue {
+  background-color: var(--pt-blue);
+}
+.text-pt-blue {
+  color: var(--pt-blue);
+}
+.text-pt-blue-ink {
+  color: var(--pt-blue-ink);
+}
+
+.bg-pt-orange {
+  background-color: var(--pt-orange);
+}
+.text-pt-orange {
+  color: var(--pt-orange);
+}
+.hover\:bg-pt-orange-dark:hover {
+  background-color: var(--pt-orange-dark);
+}
+
+.text-pt-text {
+  color: var(--pt-text);
+}
+.text-pt-muted {
+  color: var(--pt-muted);
+}
+.border-pt-line {
+  border-color: var(--pt-line);
+}
+
+.bg-pt-tint {
+  background-color: var(--pt-tint);
+}
+.hover\:bg-pt-tint:hover {
+  background-color: var(--pt-tint);
+}
+
+.hover\:text-pt-blue:hover {
+  color: var(--pt-blue);
+}
+.hover\:text-pt-blue-ink:hover {
+  color: var(--pt-blue-ink);
+}
+.hover\:text-pt-orange-dark:hover {
+  color: var(--pt-orange-dark);
+}
+.hover\:border-pt-blue:hover {
+  border-color: var(--pt-blue);
+}
+
+/* ---------- 3. Base & Header Layout ---------- */
+body {
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  color: var(--pt-text);
+  background-color: #ffffff;
+}
+
+/* Header sticks: top bar scrolls away on desktop/tablet, navbar stays pinned */
+.pt-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s var(--pt-ease);
+}
+
+@media (min-width: 576px) {
+  .pt-header {
+    top: calc(var(--pt-topbar-h) * -1);
+  }
+}
+
+.pt-header.is-scrolled {
+  --pt-nav-h: 66px;
+  --pt-logo-h: 31px;
+  box-shadow: 0 8px 28px rgba(11, 18, 32, 0.08);
+}
+
+/* Navbar inner height transitions smoothly on scroll */
+.pt-navbar-inner {
+  height: var(--pt-nav-h);
+  transition: height 0.3s var(--pt-ease);
+}
+
+.pt-brand-logo {
+  height: var(--pt-logo-h);
+  width: auto;
+  transition: height 0.3s var(--pt-ease);
+}
+
+/* ---------- 4. Navigation Link & Animated Underline ---------- */
+.pt-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.05rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--pt-text);
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.pt-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 1.05rem;
+  right: 1.05rem;
+  bottom: -1px;
+  height: 3px;
+  background-color: var(--pt-blue);
+  border-radius: 3px 3px 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--pt-ease);
+}
+
+.pt-nav-link:hover,
+.pt-dropdown.is-open > .pt-nav-link,
+.pt-nav-link.active {
+  color: var(--pt-blue-ink);
+}
+
+.pt-nav-link:hover::after,
+.pt-dropdown.is-open > .pt-nav-link::after,
+.pt-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Chevron icon animation */
+.pt-chevron {
+  display: inline-block;
+  font-size: 0.65rem;
+  margin-left: 0.4rem;
+  transition: transform 0.25s var(--pt-ease);
+}
+
+.pt-dropdown.is-open .pt-chevron,
+.pt-mobile-toggle.is-active .pt-chevron {
+  transform: rotate(180deg);
+}
+
+/* ---------- 5. Dropdown Menus (Desktop >= 992px) ---------- */
+@keyframes ptMenuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 992px) {
+  .pt-dropdown {
+    position: static;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .pt-dropdown--local {
+    position: relative;
+  }
+
+  .pt-menu {
+    position: absolute;
+    top: 100%;
+    margin-top: 0;
+    padding: 0.75rem;
+    background: #ffffff;
+    border: 1px solid var(--pt-line);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 24px 48px -12px rgba(11, 18, 32, 0.18);
+    display: none;
+    z-index: 50;
+  }
+
+  .pt-dropdown.is-open > .pt-menu {
+    display: grid;
+    animation: ptMenuFadeIn 0.22s var(--pt-ease) forwards;
+  }
+
+  /* Wide Mega Menu */
+  .pt-menu--wide {
+    left: 0;
+    right: 0;
+    grid-template-columns: 1fr 270px;
+    gap: 0.75rem;
+  }
+
+  /* Medium Dropdown */
+  .pt-menu--medium {
+    left: 0;
+    right: auto;
+    width: 420px;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+  }
+
+  /* Small Dropdown */
+  .pt-menu--small {
+    left: 0;
+    right: auto;
+    width: 320px;
+    display: none;
+  }
+
+  .pt-dropdown.is-open > .pt-menu--small {
+    display: block;
+    animation: ptMenuFadeIn 0.22s var(--pt-ease) forwards;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .pt-menu--wide {
+    grid-template-columns: 1fr 230px;
+  }
+  .pt-nav-link {
+    padding: 0 0.75rem;
+    font-size: 0.86rem;
+  }
+  .pt-nav-link::after {
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+/* Dropdown Menu Item Cards */
+.pt-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  color: var(--pt-text);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.pt-item:hover {
+  background-color: var(--pt-tint);
+}
+
+.pt-item-icon {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background-color: var(--pt-tint);
+  color: var(--pt-blue-ink);
+  font-size: 1.1rem;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.pt-item:hover .pt-item-icon {
+  background-color: var(--pt-blue);
+  color: #ffffff;
+}
+
+/* ---------- 6. Mobile Drawer (Offcanvas) Classes ---------- */
+.pt-drawer-open {
+  overflow: hidden;
+}
+
+#ptBackdrop {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+#ptBackdrop.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+#ptMenu {
+  transform: translateX(100%);
+  translate: 0 0;
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+#ptMenu.is-open {
+  transform: translateX(0) !important;
+  translate: 0 0 !important;
+}
+
+/* Mobile Accordions */
+.pt-mobile-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s var(--pt-ease);
+}
+
+.pt-mobile-collapse.is-expanded {
+  max-height: 800px;
+}
+
+/* ---------- 7. Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -6,14 +6,14 @@
 /* ---------- 1. Design Tokens ---------- */
 :root {
   --pt-navy: #0b1220;
-  --pt-blue: #009fe3;
-  --pt-blue-ink: #007db8;
+  --pt-blue: #04a9ff;
+  --pt-blue-ink: #04a9ff;
   --pt-orange: #ff6b35;
   --pt-orange-dark: #e9561f;
   --pt-text: #0b1220;
   --pt-muted: #5b667a;
   --pt-line: #e4eaf2;
-  --pt-tint: #f2f8fc;
+  --pt-tint: #f0f9ff;
 
   --pt-topbar-h: 40px;
   --pt-nav-h: 76px;
@@ -24,14 +24,14 @@
 /* Tailwind v4 Theme directive (used by Tailwind CLI / Vite) */
 @theme {
   --color-pt-navy: #0b1220;
-  --color-pt-blue: #009fe3;
-  --color-pt-blue-ink: #007db8;
+  --color-pt-blue: #04a9ff;
+  --color-pt-blue-ink: #04a9ff;
   --color-pt-orange: #ff6b35;
   --color-pt-orange-dark: #e9561f;
   --color-pt-text: #0b1220;
   --color-pt-muted: #5b667a;
   --color-pt-line: #e4eaf2;
-  --color-pt-tint: #f2f8fc;
+  --color-pt-tint: #f0f9ff;
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
@@ -52,6 +52,21 @@
 .text-pt-blue-ink {
   color: var(--pt-blue-ink);
 }
+.border-pt-blue {
+  border-color: var(--pt-blue);
+}
+.bg-pt-blue\/10 {
+  background-color: rgba(4, 169, 255, 0.1);
+}
+.bg-pt-blue\/15 {
+  background-color: rgba(4, 169, 255, 0.15);
+}
+.border-pt-blue\/20 {
+  border-color: rgba(4, 169, 255, 0.2);
+}
+.border-pt-blue\/30 {
+  border-color: rgba(4, 169, 255, 0.3);
+}
 
 .bg-pt-orange {
   background-color: var(--pt-orange);
@@ -61,6 +76,30 @@
 }
 .hover\:bg-pt-orange-dark:hover {
   background-color: var(--pt-orange-dark);
+}
+
+/* Modern CTA Button styling (Capsule, Rich Gradient & 3D Depth) */
+.pt-btn-cta {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff783e 50%, #e9561f 100%) !important;
+  color: #ffffff !important;
+  box-shadow:
+    0 4px 18px rgba(255, 107, 53, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-decoration: none;
+}
+.pt-btn-cta:hover {
+  background: linear-gradient(135deg, #ff783e 0%, #ff6b35 50%, #d8450f 100%) !important;
+  box-shadow:
+    0 8px 28px rgba(255, 107, 53, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+.pt-btn-cta:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .text-pt-text {
@@ -361,7 +400,126 @@ body {
   max-height: 800px;
 }
 
-/* ---------- 7. Reduced Motion ---------- */
+/* ---------- 7. Hero Section Animations & Effects ---------- */
+@keyframes ptFloatSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes ptFloatReverse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.pt-float-slow {
+  animation: ptFloatSlow 6s ease-in-out infinite;
+}
+.pt-float-reverse {
+  animation: ptFloatReverse 7s ease-in-out infinite;
+}
+
+.pt-code-window {
+  box-shadow:
+    0 24px 60px -12px rgba(11, 18, 32, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Animated Multi-Stop Text Gradient Flow */
+@keyframes ptGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* High-Contrast Animated Text Gradient (Default: Electric Azure & Cyan Flow) */
+.pt-text-gradient {
+  background: linear-gradient(
+    135deg,
+    #004899 0%,
+    #006ec4 22%,
+    #04a9ff 48%,
+    #00d2ff 68%,
+    #006ec4 88%,
+    #004899 100%
+  );
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #04a9ff;
+  display: inline-block;
+  animation: ptGradientFlow 6s ease-in-out infinite;
+  will-change: background-position;
+  transition: filter 0.3s ease;
+}
+
+.pt-text-gradient:hover {
+  animation-duration: 3.5s;
+}
+
+/* Variant 2: Brand Harmony Animated (Deep Sapphire -> Electric Blue -> Sunset Ember) */
+.pt-text-gradient-brand {
+  background: linear-gradient(
+    135deg,
+    #004b93 0%,
+    #04a9ff 35%,
+    #ff783e 65%,
+    #004b93 100%
+  );
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #04a9ff;
+  display: inline-block;
+  animation: ptGradientFlow 6s ease-in-out infinite;
+  will-change: background-position;
+}
+
+.pt-text-gradient-brand:hover {
+  animation-duration: 3.5s;
+}
+
+/* Variant 3: Modern Tech Indigo (Cobalt -> Electric Blue -> Indigo Glow) */
+.pt-text-gradient-indigo {
+  background: linear-gradient(
+    135deg,
+    #1e40af 0%,
+    #04a9ff 35%,
+    #6366f1 65%,
+    #1e40af 100%
+  );
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #04a9ff;
+  display: inline-block;
+  animation: ptGradientFlow 6s ease-in-out infinite;
+  will-change: background-position;
+}
+
+.pt-text-gradient-indigo:hover {
+  animation-duration: 3.5s;
+}
+
+/* ---------- 8. Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -179,4 +179,44 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  /* --------------------------------------------------------
+     6. Services Section Category Filter Tabs
+     -------------------------------------------------------- */
+  const serviceTabs = document.querySelectorAll(".service-filter-tab");
+  const serviceCards = document.querySelectorAll(".pt-service-card");
+
+  serviceTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const selectedFilter = tab.getAttribute("data-service-filter");
+
+      // Update active tab styling & ARIA state
+      serviceTabs.forEach((t) => {
+        t.classList.remove("active", "text-pt-navy");
+        t.classList.add("text-slate-600");
+        t.setAttribute("aria-selected", "false");
+      });
+
+      tab.classList.add("active", "text-pt-navy");
+      tab.classList.remove("text-slate-600");
+      tab.setAttribute("aria-selected", "true");
+
+      // Filter and animate matching service cards
+      serviceCards.forEach((card) => {
+        const category = card.getAttribute("data-service-category");
+        const shouldShow =
+          selectedFilter === "all" || category === selectedFilter;
+
+        card.classList.remove("is-revealing");
+        if (shouldShow) {
+          card.classList.remove("is-hidden");
+          // Force reflow so reveal animation replays cleanly on tab switch
+          void card.offsetWidth;
+          card.classList.add("is-revealing");
+        } else {
+          card.classList.add("is-hidden");
+        }
+      });
+    });
+  });
 });

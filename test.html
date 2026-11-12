@@ -1,0 +1,375 @@
+<div class="col-md-12" data-colsize="12"><div class="wraper-section selectedBgColor"><div class="col-md-12" data-colsize="12"><div class="wraper-section"><!-- Uses the Bootstrap 5 CSS and JavaScript already loaded by the WUST page. -->
+<div class="col-md-12" data-colsize="12" id="wustCptSection">
+  <div class="wraper-section selectedBgColor">
+    <style>
+      #wustCptSection {
+        --cpt-primary: #1e3a8a;
+        --cpt-text: #656565;
+      }
+
+      #wustCptSection .cpt-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      #wustCptSection .cpt-tabs .nav-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      #wustCptSection .cpt-tabs .nav-link {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #374151;
+        border-radius: var(--bs-nav-pills-border-radius, 0.375rem);
+        color: #374151 !important;
+        background-color: #fff !important;
+        font-size: 0.95rem;
+        padding: 0.6rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      #wustCptSection .cpt-tabs .nav-link:hover {
+        background-color: #f3f4f6 !important;
+      }
+
+      #wustCptSection .cpt-tabs .nav-link.active {
+        color: #fff !important;
+        background-color: var(--cpt-primary) !important;
+      }
+
+      #wustCptSection .cpt-tabs .nav-link:focus-visible,
+      #wustCptSection .accordion-button:focus-visible,
+      #wustCptSection .resources-img a:focus-visible {
+        outline: 2px solid var(--cpt-primary);
+        outline-offset: 4px;
+      }
+
+      #wustCptSection .cpt-panel {
+        padding: 10px;
+      }
+
+      #wustCptSection #wustCptOverview .cpt-overview-section {
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+      }
+
+      #wustCptSection #wustCptOverview .cpt-overview-section + .cpt-overview-section {
+        margin-top: 20px !important;
+      }
+
+      #wustCptSection .common-page-section-heading {
+        color: #2347a7;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      #wustCptSection .cpt-panel p {
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: 15px;
+        color: var(--cpt-text);
+      }
+
+      #wustCptSection #wustCptOverview .common-page-section-heading {
+        margin: 0 0 12px !important;
+      }
+
+      #wustCptSection #wustCptOverview .cpt-overview-section p {
+        margin: 0 0 10px !important;
+      }
+
+      #wustCptSection #wustCptOverview .cpt-overview-section p:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      #wustCptSection .cpt-overview-images img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+      }
+
+      /* Latest FAQ styling: transparent rows, inherited type, gray text. */
+      #wustCptSection .accordion-item {
+        background: transparent;
+        border: 0;
+        margin-bottom: 15px;
+      }
+
+      #wustCptSection .accordion-header {
+        margin: 0;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      #wustCptSection .accordion-button {
+        background: transparent;
+        color: var(--cpt-text);
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: 600;
+        padding: 0 0 10px;
+        gap: 15px;
+        box-shadow: none;
+        text-align: left;
+      }
+
+      #wustCptSection .accordion-button:not(.collapsed) {
+        background: transparent;
+        color: var(--cpt-text);
+        box-shadow: none;
+      }
+
+      #wustCptSection .accordion-button::after {
+        flex-shrink: 0;
+        margin-left: auto;
+      }
+
+      #wustCptSection .accordion-body {
+        padding: 0;
+      }
+
+      /* Resource layout follows the supplied logo-and-description cards. */
+      #wustCptSection .resources-card {
+        border-radius: 3px;
+        margin-bottom: 20px;
+      }
+
+      #wustCptSection .resources-img {
+        width: 100%;
+        height: 70px;
+      }
+
+      #wustCptSection .resources-img a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      #wustCptSection .resources-img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 6px;
+      }
+
+      #wustCptSection .resources-card p {
+        margin-top: 10px;
+        text-align: justify;
+      }
+
+      @media (min-width: 768px) {
+        #wustCptSection .cpt-tabs .nav-item {
+          flex: 0 0 calc(50% - 0.5rem);
+          max-width: calc(50% - 0.5rem);
+        }
+      }
+
+      @media (min-width: 992px) {
+        #wustCptSection .cpt-tabs .nav-item {
+          flex: 0 0 calc(32% - 0.5rem);
+          max-width: calc(32% - 0.5rem);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #wustCptSection .cpt-tabs .nav-link {
+          transition: none;
+        }
+      }
+    </style>
+
+    <div class="container mt-5">
+      <section class="cpt-panel mb-4" aria-labelledby="wustCptPauseHeading">
+        <h3 class="common-page-section-heading" id="wustCptPauseHeading">Temporary CPT Program Pause</h3>
+        <p><strong>Washington University of Science and Technology (WUST) has temporarily paused its Curricular Practical Training (CPT) program until further notice.</strong></p>
+        <p><strong>WUST is not accepting or processing CPT applications or issuing CPT authorization during this period.</strong></p>
+        <p><strong>For questions, please contact <a href="mailto:CPT@wust.edu">CPT@wust.edu</a>.</strong></p>
+      </section>
+
+
+      <ul class="nav nav-pills nav-fill mb-3 border-bottom pb-2 selectedBgColor cpt-tabs" id="wustCptTabs" role="tablist" aria-label="CPT information">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="wustCptOverviewTab" data-bs-toggle="pill" data-bs-target="#wustCptOverview" type="button" role="tab" aria-controls="wustCptOverview" aria-selected="true">Overview</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="wustCptFaqTab" data-bs-toggle="pill" data-bs-target="#wustCptFaq" type="button" role="tab" aria-controls="wustCptFaq" aria-selected="false" tabindex="-1">Frequently Asked Questions</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="wustCptResourcesTab" data-bs-toggle="pill" data-bs-target="#wustCptResources" type="button" role="tab" aria-controls="wustCptResources" aria-selected="false" tabindex="-1">Resources</button>
+        </li>
+      </ul>
+
+      <div class="tab-content shadow-sm" id="wustCptTabContent">
+
+        <!-- OVERVIEW: sections 2, 3, 5, and 6; pause notice is above navigation. -->
+        <div class="tab-pane fade show active" id="wustCptOverview" role="tabpanel" aria-labelledby="wustCptOverviewTab" tabindex="0">
+          <div class="card border-0 bg-light">
+            <div class="card-body">
+              <div class="row cpt-panel">
+                <div class="col-md-12">
+
+                  <section class="cpt-overview-section" aria-labelledby="wustCptWhatHeading">
+                    <h3 class="common-page-section-heading" id="wustCptWhatHeading">What is CPT?</h3>
+                    <p>Curricular Practical Training (CPT) is an F-1 employment authorization for eligible practical training that is an integral part of an established curriculum. CPT must be authorized by a Designated School Official (DSO) in SEVIS and reflected on the student’s Form I-20 before the authorized training begins.</p>
+                  </section>
+
+                  <section class="cpt-overview-section" aria-labelledby="wustCptStudentsHeading">
+                    <h3 class="common-page-section-heading" id="wustCptStudentsHeading">What the Pause Means for Students</h3>
+                    <p>WUST is not accepting or processing CPT applications or issuing CPT authorizations during this period. Previously issued WUST CPT authorizations were updated to end no later than October 4, 2026. Students must not perform work or practical training requiring CPT authorization without valid authorization. Students must continue to maintain their F-1 status and applicable enrollment requirements.</p>
+                  </section>
+
+                  <section class="cpt-overview-section" aria-labelledby="wustCptCareerHeading">
+                    <h3 class="common-page-section-heading" id="wustCptCareerHeading">Career Services</h3>
+                    <p>The <a href="https://www.wust.edu/center-for-career-services">Center for Career Services</a> continues to provide career-development support, including resume assistance, interview preparation, and job-search guidance. Career Services assistance does not constitute employment authorization.</p>
+                  </section>
+
+                  <section class="cpt-overview-section" aria-labelledby="wustCptContactHeading">
+                    <h3 class="common-page-section-heading" id="wustCptContactHeading">Contact</h3>
+                    <p>
+                      For F-1 status questions: <a href="mailto:ISO@wust.edu">ISO@wust.edu</a><br>
+                      For CPT questions: <a href="mailto:CPT@wust.edu">CPT@wust.edu</a><br>
+                      For OPT questions: <a href="mailto:opt@wust.edu">opt@wust.edu</a>
+                    </p>
+                  </section>
+
+                  <div class="row cpt-overview-images mt-3">
+                    <div class="col-md-6 mt-2">
+                      <img src="https://wust.edu/uploads/extra_file/1761250378848DSCF2499.jpg" alt="WUST campus community" loading="lazy" decoding="async">
+                    </div>
+                    <div class="col-md-6 mt-2">
+                      <img src="https://wust.edu/uploads/extra_file/17612509143252DSCF5437.jpg" alt="WUST university activities" loading="lazy" decoding="async">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FREQUENTLY ASKED QUESTIONS: section 4, latest accordion styling. -->
+        <div class="tab-pane fade" id="wustCptFaq" role="tabpanel" aria-labelledby="wustCptFaqTab" tabindex="0">
+          <div class="card border-0 bg-light">
+            <div class="card-body">
+              <div class="row cpt-panel">
+                <div class="col-md-12">
+                  <h3 class="common-page-section-heading">Frequently Asked Questions</h3>
+                  <div class="accordion accordion-flush" id="wustCptFaqAccordion">
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="wustCptFaqHeadingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wustCptFaqCollapseOne" aria-expanded="false" aria-controls="wustCptFaqCollapseOne">Can I apply for CPT?</button>
+                      </h4>
+                      <div id="wustCptFaqCollapseOne" class="accordion-collapse collapse" aria-labelledby="wustCptFaqHeadingOne" data-bs-parent="#wustCptFaqAccordion">
+                        <div class="accordion-body"><p>No. WUST is not accepting CPT applications during the pause.</p></div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="wustCptFaqHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wustCptFaqCollapseTwo" aria-expanded="false" aria-controls="wustCptFaqCollapseTwo">When will CPT resume?</button>
+                      </h4>
+                      <div id="wustCptFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="wustCptFaqHeadingTwo" data-bs-parent="#wustCptFaqAccordion">
+                        <div class="accordion-body"><p>No resumption date has been announced. Updates will be communicated through official university channels.</p></div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="wustCptFaqHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wustCptFaqCollapseThree" aria-expanded="false" aria-controls="wustCptFaqCollapseThree">Can I continue working for my previous CPT employer?</button>
+                      </h4>
+                      <div id="wustCptFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="wustCptFaqHeadingThree" data-bs-parent="#wustCptFaqAccordion">
+                        <div class="accordion-body"><p>A previous CPT authorization does not permit employment beyond the authorization end date.</p></div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="wustCptFaqHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wustCptFaqCollapseFour" aria-expanded="false" aria-controls="wustCptFaqCollapseFour">Does the CPT pause affect OPT?</button>
+                      </h4>
+                      <div id="wustCptFaqCollapseFour" class="accordion-collapse collapse" aria-labelledby="wustCptFaqHeadingFour" data-bs-parent="#wustCptFaqAccordion">
+                        <div class="accordion-body"><p>The CPT pause does not, by itself, eliminate eligibility for Optional Practical Training (OPT). For individual OPT questions, contact <a href="mailto:opt@wust.edu">opt@wust.edu</a>.</p></div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="wustCptFaqHeadingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wustCptFaqCollapseFive" aria-expanded="false" aria-controls="wustCptFaqCollapseFive">Can I volunteer while CPT is paused?</button>
+                      </h4>
+                      <div id="wustCptFaqCollapseFive" class="accordion-collapse collapse" aria-labelledby="wustCptFaqHeadingFive" data-bs-parent="#wustCptFaqAccordion">
+                        <div class="accordion-body"><p>Genuine volunteer service may be permissible, but unpaid internships, training, or continuing duties previously performed under CPT can raise immigration and labor-law concerns. Contact the International Student Office before beginning such activities.</p></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESOURCES: three career tools with linked logos and descriptions. -->
+        <div class="tab-pane fade" id="wustCptResources" role="tabpanel" aria-labelledby="wustCptResourcesTab" tabindex="0">
+          <div class="card border-0 bg-light">
+            <div class="card-body">
+              <div class="row cpt-panel">
+                <div class="col-md-12">
+                  <h3 class="common-page-section-heading">Resources</h3>
+                  <p>Explore the following tools for job searching, career exploration, and strengths development.</p>
+                  <div class="resources-portal">
+                    <div class="row">
+
+                      <div class="col-md-4 mt-2">
+                        <div class="resources-card">
+                          <div class="resources-img">
+                            <a href="https://www.indeed.com/" target="_blank" rel="noopener noreferrer">
+                              <img src="https://wust.edu/uploads/extra_file/17939109301130carrer_tool_logo%201.png" alt="Indeed (opens in a new tab)" loading="lazy" decoding="async">
+                            </a>
+                          </div>
+                          <p>Search job opportunities and explore employers with Indeed.</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 mt-2">
+                        <div class="resources-card">
+                          <div class="resources-img">
+                            <a href="https://www.careerexplorer.com/" target="_blank" rel="noopener noreferrer">
+                              <img src="https://wust.edu/uploads/extra_file/17939109532509carrer_tool_logo%202.png" alt="CareerExplorer (opens in a new tab)" loading="lazy" decoding="async">
+                            </a>
+                          </div>
+                          <p>Explore career paths that match your interests, personality, and strengths.</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 mt-2">
+                        <div class="resources-card">
+                          <div class="resources-img">
+                            <a href="https://www.gallup.com/cliftonstrengths/en/" target="_blank" rel="noopener noreferrer">
+                              <img src="https://wust.edu/uploads/extra_file/17939109754956carrer_tool_logo%203.png" alt="Gallup CliftonStrengths (opens in a new tab)" loading="lazy" decoding="async">
+                            </a>
+                          </div>
+                          <p>Discover your talents and develop your strengths with Gallup CliftonStrengths.</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
+</div></div>

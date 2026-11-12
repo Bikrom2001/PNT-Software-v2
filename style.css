@@ -519,8 +519,51 @@ body {
   animation-duration: 3.5s;
 }
 
-/* ---------- 8. Reduced Motion ---------- */
+/* ---------- 8. Services Section Utilities ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+.service-filter-tab {
+  transition: all 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.service-filter-tab.active {
+  background-color: #ffffff;
+  color: var(--pt-navy);
+  box-shadow: 0 2px 10px -1px rgba(11, 18, 32, 0.08);
+}
+
+.pt-service-card {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.25s ease;
+}
+.pt-service-card.is-hidden {
+  display: none;
+}
+
+@keyframes ptServiceReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.pt-service-card.is-revealing {
+  animation: ptServiceReveal 0.35s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+/* ---------- 9. Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   *,
   *::before,
   *::after {

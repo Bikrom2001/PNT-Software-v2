@@ -219,4 +219,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // Auto-close desktop dropdown when clicking in-page industry anchor links
+  document.querySelectorAll("[data-select-industry]").forEach((navLink) => {
+    navLink.addEventListener("click", () => {
+      closeAllDropdowns();
+      if (!desktopQuery.matches) {
+        closeMobileMenu();
+      }
+    });
+  });
 });

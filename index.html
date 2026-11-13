@@ -12,6 +12,20 @@
 
     <!-- Tailwind CSS v4 Browser CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-pt-navy: #0b1220;
+        --color-pt-blue: #04a9ff;
+        --color-pt-blue-ink: #04a9ff;
+        --color-pt-orange: #ff6b35;
+        --color-pt-orange-dark: #e9561f;
+        --color-pt-text: #0b1220;
+        --color-pt-muted: #5b667a;
+        --color-pt-line: #e4eaf2;
+        --color-pt-tint: #f0f9ff;
+        --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+      }
+    </style>
 
     <!-- Bootstrap Icons & Plus Jakarta Sans Font -->
     <link
@@ -296,7 +310,7 @@
               <div class="pt-menu pt-menu--wide">
                 <div>
                   <div class="grid grid-cols-2 gap-1">
-                    <a class="pt-item" href="#">
+                    <a class="pt-item" href="#industries" data-select-industry="healthcare">
                       <div class="pt-item-icon">
                         <i class="bi bi-heart-pulse"></i>
                       </div>
@@ -309,7 +323,7 @@
                         >
                       </div>
                     </a>
-                    <a class="pt-item" href="#">
+                    <a class="pt-item" href="#industries" data-select-industry="fintech">
                       <div class="pt-item-icon"><i class="bi bi-bank"></i></div>
                       <div>
                         <strong class="block text-sm font-semibold text-pt-navy"
@@ -320,7 +334,7 @@
                         >
                       </div>
                     </a>
-                    <a class="pt-item" href="#">
+                    <a class="pt-item" href="#industries" data-select-industry="ecommerce">
                       <div class="pt-item-icon"><i class="bi bi-bag"></i></div>
                       <div>
                         <strong class="block text-sm font-semibold text-pt-navy"
@@ -331,7 +345,7 @@
                         >
                       </div>
                     </a>
-                    <a class="pt-item" href="#">
+                    <a class="pt-item" href="#industries" data-select-industry="education">
                       <div class="pt-item-icon">
                         <i class="bi bi-mortarboard"></i>
                       </div>
@@ -344,7 +358,7 @@
                         >
                       </div>
                     </a>
-                    <a class="pt-item" href="#">
+                    <a class="pt-item" href="#industries" data-select-industry="logistics">
                       <div class="pt-item-icon"><i class="bi bi-truck"></i></div>
                       <div>
                         <strong class="block text-sm font-semibold text-pt-navy"
@@ -355,7 +369,7 @@
                         >
                       </div>
                     </a>
-                    <a class="pt-item" href="#">
+                    <a class="pt-item" href="#industries" data-select-industry="realestate">
                       <div class="pt-item-icon">
                         <i class="bi bi-buildings"></i>
                       </div>
@@ -371,7 +385,7 @@
                   </div>
                   <a
                     class="inline-flex items-center gap-1.5 text-xs font-semibold text-pt-blue-ink hover:text-pt-orange-dark mt-3 ml-2.5 transition-colors group"
-                    href="#"
+                    href="#industries"
                   >
                     <span>View all industries</span>
                     <i
@@ -585,37 +599,37 @@
             </button>
             <div id="ptMobileIndustries" class="pt-mobile-collapse">
               <div class="pt-2 pl-2 space-y-1">
-                <a href="#" class="pt-item py-2">
+                <a href="#industries" data-select-industry="healthcare" class="pt-item py-2">
                   <div class="pt-item-icon w-8 h-8 text-base">
                     <i class="bi bi-heart-pulse"></i>
                   </div>
                   <strong class="text-sm font-semibold">Healthcare</strong>
                 </a>
-                <a href="#" class="pt-item py-2">
+                <a href="#industries" data-select-industry="fintech" class="pt-item py-2">
                   <div class="pt-item-icon w-8 h-8 text-base">
                     <i class="bi bi-bank"></i>
                   </div>
                   <strong class="text-sm font-semibold">Fintech</strong>
                 </a>
-                <a href="#" class="pt-item py-2">
+                <a href="#industries" data-select-industry="ecommerce" class="pt-item py-2">
                   <div class="pt-item-icon w-8 h-8 text-base">
                     <i class="bi bi-bag"></i>
                   </div>
                   <strong class="text-sm font-semibold">E-commerce</strong>
                 </a>
-                <a href="#" class="pt-item py-2">
+                <a href="#industries" data-select-industry="education" class="pt-item py-2">
                   <div class="pt-item-icon w-8 h-8 text-base">
                     <i class="bi bi-mortarboard"></i>
                   </div>
                   <strong class="text-sm font-semibold">Education</strong>
                 </a>
-                <a href="#" class="pt-item py-2">
+                <a href="#industries" data-select-industry="logistics" class="pt-item py-2">
                   <div class="pt-item-icon w-8 h-8 text-base">
                     <i class="bi bi-truck"></i>
                   </div>
                   <strong class="text-sm font-semibold">Logistics</strong>
                 </a>
-                <a href="#" class="pt-item py-2">
+                <a href="#industries" data-select-industry="realestate" class="pt-item py-2">
                   <div class="pt-item-icon w-8 h-8 text-base">
                     <i class="bi bi-buildings"></i>
                   </div>
@@ -764,7 +778,7 @@
        HERO SECTION (World-Class Software Agency Design)
        ===================================================== -->
     <main
-      class="relative overflow-hidden bg-gradient-to-b from-[#f8fcff] via-white to-slate-50/70 pt-10 pb-20 lg:pt-16 lg:pb-28"
+      class="relative overflow-hidden bg-gradient-to-b from-[#f8fcff] via-white to-slate-50/70 pt-10 pb-18 lg:pt-14 lg:pb-18"
     >
       <!-- Atmospheric Engineering Dot Matrix Grid Pattern -->
       <div
@@ -788,11 +802,12 @@
           <div class="lg:col-span-6 flex flex-col items-start">
             <!-- Hero Headline -->
             <h1
-              class="text-4xl sm:text-5xl lg:text-[58px] font-extrabold text-pt-navy tracking-tight leading-[1.12] mb-6"
+              class="text-3xl sm:text-4xl lg:text-[36px] xl:text-[44px] font-extrabold text-pt-navy tracking-tight leading-[1.15] mb-6"
             >
               We Engineer <br class="hidden sm:inline" />
               <span class="pt-text-gradient">Enterprise Software</span>
-              That Drives Scalable Growth.
+              <br class="hidden lg:inline" />
+              <span class="lg:whitespace-nowrap">That Drives Scalable Growth.</span>
             </h1>
 
             <!-- Hero Subtitle -->
@@ -875,194 +890,568 @@
             </div>
           </div>
 
-          <!-- Right Column (Organic Curved Bento Collage - Matching User Reference) - 6 Columns -->
+          <!-- Right Column (Animated Vector Engineering Illustration) - 6 Columns -->
           <div
-            class="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-12 lg:mt-0"
+            class="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-10 lg:mt-0"
           >
-            <!-- Atmospheric Brand Glow Orbs Behind Collage -->
+            <!-- Atmospheric Brand Glow Orbs Behind Illustration -->
             <div
-              class="absolute -top-12 -right-12 w-80 h-80 bg-pt-blue/15 rounded-full blur-3xl pointer-events-none"
+              class="absolute -top-10 -right-10 w-80 h-80 bg-pt-blue/15 rounded-full blur-3xl pointer-events-none"
             ></div>
             <div
-              class="absolute -bottom-10 -left-10 w-72 h-72 bg-pt-orange/15 rounded-full blur-3xl pointer-events-none"
+              class="absolute -bottom-8 -left-8 w-72 h-72 bg-pt-orange/12 rounded-full blur-3xl pointer-events-none"
             ></div>
 
-            <!-- Outer Stage Wrapper -->
-            <div class="relative w-full max-w-[560px]">
-              <!-- Decorative Dot Matrix Grid Shape (Top-Right Accent - 7x6 Dots) -->
-              <div
-                class="absolute -top-7 -right-7 sm:-top-9 sm:-right-9 w-36 h-32 -z-10 pointer-events-none opacity-80"
-                aria-hidden="true"
+            <!-- Interactive Animated SVG Illustration Stage -->
+            <div class="relative w-full max-w-[580px] select-none">
+              <svg
+                viewBox="0 0 580 480"
+                class="w-full h-auto drop-shadow-sm overflow-visible"
+                role="img"
+                aria-label="Animated illustration of a software developer engineering web and enterprise systems"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  class="w-full h-full text-pt-blue"
-                  viewBox="0 0 140 120"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <pattern
-                      id="hero-dots-blue"
-                      x="0"
-                      y="0"
-                      width="20"
-                      height="20"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <circle cx="5" cy="5" r="3.5" fill="currentColor" />
-                    </pattern>
-                  </defs>
-                  <rect width="140" height="120" fill="url(#hero-dots-blue)" />
-                </svg>
-              </div>
+                <defs>
+                  <!-- Main Window Clip -->
+                  <clipPath id="ide-window-clip">
+                    <rect x="82" y="114" width="420" height="236" rx="16" />
+                  </clipPath>
+                  <!-- Top Floating Window Clip -->
+                  <clipPath id="top-card-clip">
+                    <rect x="248" y="64" width="196" height="108" rx="11" />
+                  </clipPath>
+                  <!-- Left Floating Card Clip -->
+                  <clipPath id="left-card-clip">
+                    <rect x="108" y="182" width="154" height="190" rx="11" />
+                  </clipPath>
+                  <!-- Soft Glow Filter -->
+                  <filter id="card-shadow" x="-15%" y="-15%" width="130%" height="140%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0b1220" flood-opacity="0.12" />
+                  </filter>
+                </defs>
 
-              <!-- Decorative Dot Matrix Grid Shape (Bottom-Left Accent - Orange Dots) -->
-              <div
-                class="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 w-28 h-28 -z-10 pointer-events-none opacity-70"
-                aria-hidden="true"
-              >
-                <svg
-                  class="w-full h-full text-pt-orange"
-                  viewBox="0 0 100 100"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <pattern
-                      id="hero-dots-orange"
-                      x="0"
-                      y="0"
-                      width="20"
-                      height="20"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <circle cx="5" cy="5" r="3" fill="currentColor" />
-                    </pattern>
-                  </defs>
-                  <rect width="100" height="100" fill="url(#hero-dots-orange)" />
-                </svg>
-              </div>
+                <!-- 1. Soft Breathing Organic Backdrop Blobs -->
+                <g class="pt-blob-breathe">
+                  <path
+                    d="M115,155 C60,220 45,330 135,380 C225,430 395,435 468,365 C540,295 520,165 445,105 C370,45 170,90 115,155 Z"
+                    fill="#dff3fd"
+                  />
+                  <path
+                    d="M320,88 C395,55 485,105 505,195 C525,285 450,360 365,365 C280,370 245,120 320,88 Z"
+                    fill="#e0f7ef"
+                    opacity="0.7"
+                  />
+                </g>
 
-              <!-- 2-Column Balanced Organic Curved Bento Grid (Harmonized 2x2 Diagonal Layout) -->
-              <div class="grid grid-cols-2 gap-4 sm:gap-5 items-stretch">
-                <!-- ==================== COLUMN 1 (Left) ==================== -->
-                <div class="flex flex-col gap-4 sm:gap-5">
-                  <!-- Stat Card 1: 150+ Clients (Top-Left Curved Arch) -->
-                  <div
-                    class="p-5 sm:p-6 rounded-tl-[48px] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gradient-to-br from-[#062038] via-[#052848] to-[#04335c] text-white border border-[#04a9ff]/25 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[140px] sm:min-h-[150px] group hover:border-[#04a9ff]/60 hover:-translate-y-0.5 transition-all duration-300"
+                <!-- Ground Shadow Ellipse Beneath Developer -->
+                <ellipse cx="362" cy="436" rx="135" ry="20" fill="#bae6fd" opacity="0.75" />
+
+                <!-- 2. Animated Dashed Tech Circuit Connectors -->
+                <path
+                  d="M175 114 V 60 Q 175 42 193 42 H 312 Q 330 42 330 60 V 72"
+                  fill="none"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                  stroke-dasharray="7 6"
+                  stroke-linecap="round"
+                  class="pt-dash-flow"
+                />
+                <path
+                  d="M84 235 H 52 Q 36 235 36 251 V 352 Q 36 368 52 368 H 165"
+                  fill="none"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                  stroke-dasharray="7 6"
+                  stroke-linecap="round"
+                  class="pt-dash-flow"
+                />
+
+                <!-- 3. Main Dark Engineering IDE Window -->
+                <g filter="url(#card-shadow)">
+                  <rect
+                    x="82"
+                    y="114"
+                    width="420"
+                    height="236"
+                    rx="16"
+                    fill="#334155"
+                    stroke="#1e293b"
+                    stroke-width="2.5"
+                  />
+                  <g clip-path="url(#ide-window-clip)">
+                    <!-- Inner Dark Screen -->
+                    <rect x="82" y="144" width="420" height="206" fill="#3b4754" />
+
+                    <!-- Interlocking Gear 1 (Large Left Gear) -->
+                    <g transform="translate(226, 232)" opacity="0.32">
+                      <g class="pt-gear-cw" fill="#0f172a">
+                        <circle r="48" />
+                        <rect x="-10" y="-62" width="20" height="124" rx="4" />
+                        <rect x="-10" y="-62" width="20" height="124" rx="4" transform="rotate(36)" />
+                        <rect x="-10" y="-62" width="20" height="124" rx="4" transform="rotate(72)" />
+                        <rect x="-10" y="-62" width="20" height="124" rx="4" transform="rotate(108)" />
+                        <rect x="-10" y="-62" width="20" height="124" rx="4" transform="rotate(144)" />
+                        <circle r="22" fill="#3b4754" />
+                      </g>
+                    </g>
+
+                    <!-- Interlocking Gear 2 (Medium Center-Right Gear) -->
+                    <g transform="translate(314, 286)" opacity="0.34">
+                      <g class="pt-gear-ccw" fill="#0f172a">
+                        <circle r="33" />
+                        <rect x="-8" y="-44" width="16" height="88" rx="3" />
+                        <rect x="-8" y="-44" width="16" height="88" rx="3" transform="rotate(45)" />
+                        <rect x="-8" y="-44" width="16" height="88" rx="3" transform="rotate(90)" />
+                        <rect x="-8" y="-44" width="16" height="88" rx="3" transform="rotate(135)" />
+                        <circle r="14" fill="#3b4754" />
+                      </g>
+                    </g>
+
+                    <!-- Interlocking Gear 3 (Small Right Accent Gear) -->
+                    <g transform="translate(442, 198)" opacity="0.35">
+                      <g class="pt-gear-cw-fast" fill="#0f172a">
+                        <circle r="24" />
+                        <rect x="-6" y="-33" width="12" height="66" rx="2.5" />
+                        <rect x="-6" y="-33" width="12" height="66" rx="2.5" transform="rotate(45)" />
+                        <rect x="-6" y="-33" width="12" height="66" rx="2.5" transform="rotate(90)" />
+                        <rect x="-6" y="-33" width="12" height="66" rx="2.5" transform="rotate(135)" />
+                        <circle r="10" fill="#3b4754" />
+                      </g>
+                    </g>
+
+                    <!-- Orange Browser Top Bar -->
+                    <rect x="82" y="114" width="420" height="32" fill="#ff6b35" />
+                    <line x1="82" y1="146" x2="502" y2="146" stroke="#1e293b" stroke-width="2" />
+                    <circle cx="104" cy="130" r="4" fill="#1e293b" />
+                    <circle cx="120" cy="130" r="4" fill="#1e293b" />
+                    <circle cx="136" cy="130" r="4" fill="#1e293b" />
+                  </g>
+                  <!-- Outer Window Frame Crisp Stroke -->
+                  <rect
+                    x="82"
+                    y="114"
+                    width="420"
+                    height="236"
+                    rx="16"
+                    fill="none"
+                    stroke="#1e293b"
+                    stroke-width="2.5"
+                  />
+                </g>
+
+                <!-- 4. Top-Right Floating UI Preview Window -->
+                <g class="pt-float-reverse" filter="url(#card-shadow)">
+                  <rect
+                    x="248"
+                    y="64"
+                    width="196"
+                    height="108"
+                    rx="11"
+                    fill="#ffffff"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                  />
+                  <g clip-path="url(#top-card-clip)">
+                    <rect x="248" y="64" width="196" height="22" fill="#ff6b35" />
+                    <line x1="248" y1="86" x2="444" y2="86" stroke="#1e293b" stroke-width="1.8" />
+                    <circle cx="263" cy="75" r="2.8" fill="#1e293b" />
+                    <circle cx="274" cy="75" r="2.8" fill="#1e293b" />
+                    <circle cx="285" cy="75" r="2.8" fill="#1e293b" />
+                  </g>
+                  <rect
+                    x="248"
+                    y="64"
+                    width="196"
+                    height="108"
+                    rx="11"
+                    fill="none"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                  />
+                  <!-- Wireframe Image Box -->
+                  <rect
+                    x="262"
+                    y="98"
+                    width="58"
+                    height="58"
+                    rx="4"
+                    fill="#f8fafc"
+                    stroke="#94a3b8"
+                    stroke-width="1.8"
+                    stroke-dasharray="5 4"
+                  />
+                  <!-- Animated Content Lines -->
+                  <g class="pt-code-pulse">
+                    <rect x="332" y="102" width="94" height="5.5" rx="2.5" fill="#334155" />
+                    <rect x="332" y="114" width="76" height="5.5" rx="2.5" fill="#475569" />
+                    <rect x="332" y="126" width="88" height="5.5" rx="2.5" fill="#334155" />
+                  </g>
+                  <g class="pt-code-pulse-delay">
+                    <rect x="332" y="138" width="96" height="5.5" rx="2.5" fill="#04a9ff" />
+                    <rect x="332" y="150" width="60" height="5.5" rx="2.5" fill="#64748b" />
+                  </g>
+                </g>
+
+                <!-- 5. Left Floating Code & Spec Card -->
+                <g class="pt-float-slow" filter="url(#card-shadow)">
+                  <rect
+                    x="108"
+                    y="182"
+                    width="154"
+                    height="190"
+                    rx="11"
+                    fill="#ffffff"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                  />
+                  <g clip-path="url(#left-card-clip)">
+                    <rect x="108" y="182" width="154" height="24" fill="#ff6b35" />
+                    <line x1="108" y1="206" x2="262" y2="206" stroke="#1e293b" stroke-width="1.8" />
+                  </g>
+                  <rect
+                    x="108"
+                    y="182"
+                    width="154"
+                    height="190"
+                    rx="11"
+                    fill="none"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                  />
+                  <!-- Block 1 -->
+                  <rect x="122" y="218" width="38" height="6" rx="3" fill="#ff6b35" />
+                  <g class="pt-code-pulse">
+                    <rect x="122" y="230" width="118" height="4.5" rx="2" fill="#334155" />
+                    <rect x="122" y="239" width="104" height="4.5" rx="2" fill="#475569" />
+                    <rect x="122" y="248" width="124" height="4.5" rx="2" fill="#334155" />
+                    <rect x="122" y="257" width="90" height="4.5" rx="2" fill="#64748b" />
+                  </g>
+                  <!-- Block 2 -->
+                  <rect x="122" y="274" width="44" height="6" rx="3" fill="#04a9ff" />
+                  <g class="pt-code-pulse-delay">
+                    <rect x="122" y="286" width="116" height="4.5" rx="2" fill="#334155" />
+                    <rect x="122" y="295" width="98" height="4.5" rx="2" fill="#475569" />
+                    <rect x="122" y="304" width="122" height="4.5" rx="2" fill="#334155" />
+                  </g>
+                  <!-- Block 3 -->
+                  <rect x="122" y="324" width="34" height="6" rx="3" fill="#ff6b35" />
+                  <rect x="122" y="336" width="84" height="4.5" rx="2" fill="#334155" />
+                  <rect x="122" y="345" width="56" height="4.5" rx="2" fill="#94a3b8" />
+                </g>
+
+                <!-- 6. Floating Code Tag Badge </> -->
+                <g class="pt-badge-bob" filter="url(#card-shadow)">
+                  <rect
+                    x="418"
+                    y="214"
+                    width="58"
+                    height="36"
+                    rx="10"
+                    fill="#ffffff"
+                    stroke="#04a9ff"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="447"
+                    y="238"
+                    text-anchor="middle"
+                    font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+                    font-size="16"
+                    font-weight="800"
+                    fill="#0b1220"
                   >
-                    <!-- Watermark Icon in Corner -->
-                    <i
-                      class="bi bi-people-fill absolute -bottom-2 -right-2 text-6xl text-[#04a9ff] opacity-15 group-hover:opacity-25 transition-opacity pointer-events-none"
-                    ></i>
-                    <div>
-                      <span
-                        class="block text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-none mb-1"
-                        >150+</span
-                      >
-                      <span
-                        class="block text-xs sm:text-sm font-bold uppercase tracking-wider text-[#04a9ff]"
-                        >Clients</span
-                      >
-                    </div>
-                    <p class="text-[11px] text-slate-300 font-medium relative z-10">
-                      Global Enterprises
-                    </p>
-                  </div>
+                    &lt;/&gt;
+                  </text>
+                </g>
 
-                  <!-- Photo 1: Office Workstation / Tech Team (Bottom-Left Curved Arch) -->
+                <!-- 7. Seated Developer Character with Laptop -->
+                <g id="hero-developer">
+                  <!-- Crossed Legs / Dark Navy Trousers -->
+                  <path
+                    d="M320,362 C282,366 266,396 296,410 C328,424 388,422 426,408 C456,396 446,365 405,362 Z"
+                    fill="#1e293b"
+                    stroke="#0f172a"
+                    stroke-width="2"
+                  />
+                  <!-- Left Sneaker (Orange) -->
+                  <path
+                    d="M276,405 C268,412 272,424 286,424 L318,421 C324,420 326,412 318,408 L292,400 Z"
+                    fill="#ff6b35"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                  />
+                  <path d="M274,421 Q296,426 322,419" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                  <!-- Right Sneaker (Orange) -->
+                  <path
+                    d="M442,405 C450,412 446,424 432,424 L400,421 C394,420 392,412 400,408 L426,400 Z"
+                    fill="#ff6b35"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                  />
+                  <path d="M444,421 Q422,426 396,419" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+
+                  <!-- Torso / Orange Knit Sweater -->
+                  <path
+                    d="M312,282 C304,310 302,344 316,364 L406,364 C420,344 418,310 410,282 C394,274 328,274 312,282 Z"
+                    fill="#ff6b35"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                  />
+                  <!-- Left & Right Arms Reaching Laptop -->
+                  <path
+                    d="M312,284 C290,308 282,340 296,356 L326,352 L322,334 L312,334 C312,322 318,308 324,298"
+                    fill="#ff6b35"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M410,284 C432,308 440,340 426,356 L396,352 L400,334 L410,334 C410,322 404,308 398,298"
+                    fill="#ff6b35"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+
+                  <!-- Crisp White Collar -->
+                  <polygon points="344,275 361,292 351,296 338,281" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round" />
+                  <polygon points="378,275 361,292 371,296 384,281" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" stroke-linejoin="round" />
+                  <circle cx="361" cy="303" r="2" fill="#1e293b" />
+
+                  <!-- Neck -->
+                  <rect x="353" y="256" width="16" height="22" rx="6" fill="#fff7ed" stroke="#1e293b" stroke-width="1.8" />
+
+                  <!-- Head & Ears -->
+                  <circle cx="337" cy="233" r="5" fill="#fff7ed" stroke="#1e293b" stroke-width="1.8" />
+                  <circle cx="385" cy="233" r="5" fill="#fff7ed" stroke="#1e293b" stroke-width="1.8" />
+                  <rect x="339" y="206" width="44" height="52" rx="22" fill="#fff7ed" stroke="#1e293b" stroke-width="2" />
+
+                  <!-- Styled Dark Hair -->
+                  <path
+                    d="M337,226 C334,204 348,191 364,193 C378,195 388,205 386,225 C382,213 372,208 359,211 C348,213 341,218 337,226 Z"
+                    fill="#1e293b"
+                  />
+                  <path
+                    d="M348,195 C354,187 372,188 377,199"
+                    fill="#1e293b"
+                  />
+
+                  <!-- Glasses & Friendly Smile -->
+                  <circle cx="350" cy="231" r="8.5" fill="#ffffff" fill-opacity="0.35" stroke="#1e293b" stroke-width="2" />
+                  <circle cx="372" cy="231" r="8.5" fill="#ffffff" fill-opacity="0.35" stroke="#1e293b" stroke-width="2" />
+                  <line x1="358.5" y1="231" x2="363.5" y2="231" stroke="#1e293b" stroke-width="2" />
+                  <circle cx="350" cy="231" r="1.8" fill="#1e293b" />
+                  <circle cx="372" cy="231" r="1.8" fill="#1e293b" />
+                  <path d="M356,245 Q361,249 366,245" fill="none" stroke="#1e293b" stroke-width="1.8" stroke-linecap="round" />
+
+                  <!-- Hands Holding Laptop Base -->
+                  <circle cx="322" cy="346" r="5.5" fill="#fff7ed" stroke="#1e293b" stroke-width="1.8" />
+                  <circle cx="400" cy="346" r="5.5" fill="#fff7ed" stroke="#1e293b" stroke-width="1.8" />
+
+                  <!-- Sleek Glowing Laptop -->
+                  <path
+                    d="M312,318 L410,318 L404,370 L318,370 Z"
+                    fill="#f8fafc"
+                    stroke="#1e293b"
+                    stroke-width="2.2"
+                    stroke-linejoin="round"
+                  />
+                  <!-- Laptop Back Emblem (PNT Blue Glow) -->
+                  <circle cx="361" cy="344" r="5.5" fill="#04a9ff" class="pt-code-pulse" />
+                  <!-- Laptop Base Keyboard Edge -->
+                  <rect x="306" y="368" width="110" height="7" rx="3.5" fill="#cbd5e1" stroke="#1e293b" stroke-width="2" />
+                </g>
+              </svg>
+
+              <!-- Floating Animated Technology Stack Icons Around Stage -->
+              <div class="pointer-events-none absolute inset-0 z-20" aria-hidden="true">
+                <!-- 1. React / Frontend (Top Left) -->
+                <div
+                  class="pointer-events-auto absolute top-1 left-2 sm:left-4 pt-tech-float-a group"
+                  style="animation-delay: 0s"
+                  title="React & Next.js"
+                >
                   <div
-                    class="rounded-bl-[48px] rounded-tl-2xl rounded-tr-2xl rounded-br-2xl overflow-hidden shadow-xl border-2 border-white/80 bg-slate-100 group relative flex-1 min-h-[250px] sm:min-h-[280px]"
+                    class="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-white/95 backdrop-blur-xs border border-slate-200/80 shadow-[0_12px_28px_-6px_rgba(11,18,32,0.12)] flex items-center justify-center -rotate-12 transition-all duration-300 group-hover:rotate-0 group-hover:scale-110 group-hover:border-[#04a9ff]/50 group-hover:shadow-[0_14px_30px_-4px_rgba(4,169,255,0.22)]"
                   >
-                    <img
-                      src="assets/Image/Abubokor-Hanip.jpg"
-                      alt="People N Tech Workstation"
-                      class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent pointer-events-none"
-                    ></div>
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="2.1" fill="#04a9ff" />
+                      <ellipse cx="12" cy="12" rx="10" ry="4.1" stroke="#04a9ff" stroke-width="1.5" />
+                      <ellipse cx="12" cy="12" rx="10" ry="4.1" stroke="#04a9ff" stroke-width="1.5" transform="rotate(60 12 12)" />
+                      <ellipse cx="12" cy="12" rx="10" ry="4.1" stroke="#04a9ff" stroke-width="1.5" transform="rotate(120 12 12)" />
+                    </svg>
                   </div>
                 </div>
 
-                <!-- ==================== COLUMN 2 (Right) ==================== -->
-                <div class="flex flex-col gap-4 sm:gap-5">
-                  <!-- Photo 2: Leadership / Farhana Hanip (Top-Right Curved Arch) -->
+                <!-- 2. PHP Backend (Top Center-Right) -->
+                <div
+                  class="pointer-events-auto absolute -top-4 sm:-top-5 left-[56%] sm:left-[57%] pt-tech-float-c group"
+                  style="animation-delay: 0.35s"
+                  title="PHP Enterprise Backend"
+                >
                   <div
-                    class="rounded-tr-[48px] rounded-tl-2xl rounded-bl-2xl rounded-br-2xl overflow-hidden shadow-xl border-2 border-white/80 bg-slate-100 group relative h-48 sm:h-56"
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-white/95 backdrop-blur-xs border border-slate-200/80 shadow-[0_12px_28px_-6px_rgba(11,18,32,0.12)] flex items-center justify-center rotate-6 transition-all duration-300 group-hover:rotate-0 group-hover:scale-110 group-hover:border-[#777bb4]/60 group-hover:shadow-[0_14px_30px_-4px_rgba(119,123,180,0.28)]"
                   >
-                    <img
-                      src="assets/Image/Farhana-Hanip.webp"
-                      alt="Farhana Hanip - President &amp; MD"
-                      class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                      loading="eager"
-                    />
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent pointer-events-none"
-                    ></div>
+                    <svg class="w-7 h-7" viewBox="0 0 28 24" fill="none">
+                      <ellipse
+                        cx="14"
+                        cy="12"
+                        rx="12"
+                        ry="6.6"
+                        fill="#777bb4"
+                        stroke="#4f5b93"
+                        stroke-width="1"
+                      />
+                      <text
+                        x="14"
+                        y="14.5"
+                        text-anchor="middle"
+                        font-family="ui-sans-serif, system-ui, -apple-system, sans-serif"
+                        font-size="8.2"
+                        font-weight="800"
+                        font-style="italic"
+                        letter-spacing="0.2"
+                        fill="#ffffff"
+                      >
+                        php
+                      </text>
+                    </svg>
                   </div>
+                </div>
 
-                  <!-- Middle Row: 2 Complementary Stat Cards Side-by-Side -->
-                  <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                    <!-- Stat Card 2: 250+ Products (Curved Leaf Cut) -->
-                    <div
-                      class="p-3.5 sm:p-4 rounded-tl-[32px] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gradient-to-br from-[#062038] via-[#052848] to-[#04335c] text-white border border-[#04a9ff]/25 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[105px] sm:min-h-[115px] group hover:border-[#04a9ff]/60 hover:-translate-y-0.5 transition-all duration-300"
-                    >
-                      <i
-                        class="bi bi-box-seam-fill absolute -bottom-2 -right-2 text-4xl text-[#04a9ff] opacity-15 group-hover:opacity-25 transition-opacity pointer-events-none"
-                      ></i>
-                      <div>
-                        <span
-                          class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-none mb-1"
-                          >250+</span
-                        >
-                        <span
-                          class="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#04a9ff]"
-                          >Products</span
-                        >
-                      </div>
-                      <p class="text-[10px] text-slate-300 font-medium relative z-10">
-                        Delivered
-                      </p>
-                    </div>
-
-                    <!-- Stat Card 3: 18+ Experience -->
-                    <div
-                      class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-[#062038] via-[#052848] to-[#04335c] text-white border border-[#04a9ff]/25 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[105px] sm:min-h-[115px] group hover:border-[#04a9ff]/60 hover:-translate-y-0.5 transition-all duration-300"
-                    >
-                      <i
-                        class="bi bi-award-fill absolute -bottom-2 -right-2 text-4xl text-[#04a9ff] opacity-15 group-hover:opacity-25 transition-opacity pointer-events-none"
-                      ></i>
-                      <div>
-                        <span
-                          class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-none mb-1"
-                          >10+</span
-                        >
-                        <span
-                          class="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#04a9ff]"
-                          >Experience</span
-                        >
-                      </div>
-                      <p class="text-[10px] text-slate-300 font-medium relative z-10">
-                        Years Legacy
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- Photo 3 (3rd Image Slot): Teamwork & Collaboration (Bottom-Right Curved Arch) -->
+                <!-- 3. Cloud & AWS Architecture (Top Right) -->
+                <div
+                  class="pointer-events-auto absolute top-1 right-2 sm:right-4 pt-tech-float-b group"
+                  style="animation-delay: 0.7s"
+                  title="Cloud & AWS"
+                >
                   <div
-                    class="rounded-br-[48px] rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl overflow-hidden shadow-xl border-2 border-white/80 bg-slate-100 group relative flex-1 min-h-[160px] sm:min-h-[190px]"
+                    class="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-white/95 backdrop-blur-xs border border-slate-200/80 shadow-[0_12px_28px_-6px_rgba(11,18,32,0.12)] flex items-center justify-center rotate-12 transition-all duration-300 group-hover:rotate-0 group-hover:scale-110 group-hover:border-[#ff6b35]/50 group-hover:shadow-[0_14px_30px_-4px_rgba(255,107,53,0.22)]"
                   >
-                    <img
-                      src="assets/Image/Abubokor-Hanip-work.jpg"
-                      alt="People N Tech Teamwork"
-                      class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent pointer-events-none"
-                    ></div>
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M7 16.5H17.2C19.3 16.5 21 14.9 21 12.8C21 10.9 19.6 9.3 17.7 9.1C17 6.5 14.6 4.7 11.8 4.7C8.4 4.7 5.7 7.3 5.6 10.6C3.9 11 2.7 12.4 2.7 14.1C2.7 15.5 3.9 16.5 7 16.5Z"
+                        fill="#0f172a"
+                        fill-opacity="0.08"
+                        stroke="#0f172a"
+                        stroke-width="1.6"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.5 18.8C9.8 20.4 14.2 20.4 17.5 18.7"
+                        stroke="#ff6b35"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M16.2 17.8L18 18.6L17.1 20.3"
+                        stroke="#ff6b35"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- 3. Node.js / Backend (Mid Left) -->
+                <div
+                  class="pointer-events-auto hidden sm:block absolute top-[28%] left-0 pt-tech-float-c group"
+                  style="animation-delay: 1.2s"
+                  title="Node.js & APIs"
+                >
+                  <div
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-white/95 backdrop-blur-xs border border-slate-200/80 shadow-[0_12px_28px_-6px_rgba(11,18,32,0.12)] flex items-center justify-center rotate-6 transition-all duration-300 group-hover:rotate-0 group-hover:scale-110 group-hover:border-emerald-500/50 group-hover:shadow-[0_14px_30px_-4px_rgba(16,185,129,0.22)]"
+                  >
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                      <polygon
+                        points="12,2.5 20.2,7.25 20.2,16.75 12,21.5 3.8,16.75 3.8,7.25"
+                        fill="#10b981"
+                        fill-opacity="0.14"
+                        stroke="#16a34a"
+                        stroke-width="1.6"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.5 14.8V9.2L14.5 14.8V9.2"
+                        stroke="#15803d"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- 4. Python & AI (Mid Right) -->
+                <div
+                  class="pointer-events-auto hidden sm:block absolute top-[43%] -right-1 pt-tech-float-a group"
+                  style="animation-delay: 1.8s"
+                  title="Python & AI Automation"
+                >
+                  <div
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-white/95 backdrop-blur-xs border border-slate-200/80 shadow-[0_12px_28px_-6px_rgba(11,18,32,0.12)] flex items-center justify-center -rotate-6 transition-all duration-300 group-hover:rotate-0 group-hover:scale-110 group-hover:border-amber-500/50 group-hover:shadow-[0_14px_30px_-4px_rgba(245,158,11,0.22)]"
+                  >
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M11.9 3.2C8.8 3.2 9.1 4.6 9.1 4.6V6.6H12.1V7.4H7.6C7.6 7.4 5 7.1 5 10.6C5 14.1 7.2 13.9 7.2 13.9H8.6V11.8C8.6 11.8 8.5 9.6 10.7 9.6H14.3C14.3 9.6 16.3 9.6 16.3 7.6V4.9C16.3 4.9 16.6 3.2 11.9 3.2Z"
+                        fill="#0284c7"
+                      />
+                      <circle cx="10.4" cy="4.9" r="0.7" fill="#ffffff" />
+                      <path
+                        d="M12.1 20.8C15.2 20.8 14.9 19.4 14.9 19.4V17.4H11.9V16.6H16.4C16.4 16.6 19 16.9 19 13.4C19 9.9 16.8 10.1 16.8 10.1H15.4V12.2C15.4 12.2 15.5 14.4 13.3 14.4H9.7C9.7 14.4 7.7 14.4 7.7 16.4V19.1C7.7 19.1 7.4 20.8 12.1 20.8Z"
+                        fill="#f59e0b"
+                      />
+                      <circle cx="13.6" cy="19.1" r="0.7" fill="#ffffff" />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- 5. Flutter / Mobile Apps (Bottom Left) -->
+                <div
+                  class="pointer-events-auto absolute bottom-2 left-4 sm:left-8 pt-tech-float-b group"
+                  style="animation-delay: 0.4s"
+                  title="Flutter Mobile Apps"
+                >
+                  <div
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-white/95 backdrop-blur-xs border border-slate-200/80 shadow-[0_12px_28px_-6px_rgba(11,18,32,0.12)] flex items-center justify-center rotate-12 transition-all duration-300 group-hover:rotate-0 group-hover:scale-110 group-hover:border-[#04a9ff]/50 group-hover:shadow-[0_14px_30px_-4px_rgba(4,169,255,0.22)]"
+                  >
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                      <path d="M14.3 3L5.3 12L8.1 14.8L19.9 3H14.3Z" fill="#38bdf8" />
+                      <path d="M14.3 11.4L9.5 16.2L12.3 19L19.9 11.4H14.3Z" fill="#04a9ff" />
+                      <path d="M9.5 16.2L14.3 21H19.9L12.3 13.4L9.5 16.2Z" fill="#0369a1" />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- 6. Laravel Framework (Bottom Right) -->
+                <div
+                  class="pointer-events-auto absolute bottom-3 right-2 sm:right-5 pt-tech-float-c group"
+                  style="animation-delay: 1.5s"
+                  title="Laravel PHP Framework"
+                >
+                  <div
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-white/95 backdrop-blur-xs border border-slate-200/80 shadow-[0_12px_28px_-6px_rgba(11,18,32,0.12)] flex items-center justify-center -rotate-12 transition-all duration-300 group-hover:rotate-0 group-hover:scale-110 group-hover:border-[#ff2d20]/50 group-hover:shadow-[0_14px_30px_-4px_rgba(255,45,32,0.22)]"
+                  >
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M7.0 3.1L10.2 4.8L7.0 6.5L3.8 4.8L7.0 3.1Z"
+                        fill="#ff2d20"
+                        fill-opacity="0.14"
+                      />
+                      <path
+                        d="M16.6 6.5L19.8 8.2L16.6 9.9L13.4 8.2L16.6 6.5Z"
+                        fill="#ff2d20"
+                        fill-opacity="0.14"
+                      />
+                      <path
+                        d="M7.0 3.1L10.2 4.8L7.0 6.5L3.8 4.8L7.0 3.1ZM16.6 6.5L19.8 8.2L16.6 9.9L13.4 8.2L16.6 6.5ZM3.8 4.8V16.7L10.2 20.1L19.8 15.0V8.2M7.0 6.5V15.0L10.2 16.7L16.6 13.3V9.9M10.2 4.8V13.3M7.0 15.0L13.4 11.6V8.2M13.4 11.6L16.6 13.3L19.8 11.6M10.2 16.7V20.1"
+                        stroke="#ff2d20"
+                        stroke-width="1.35"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -1071,6 +1460,192 @@
         </div>
       </div>
     </main>
+
+    <!-- =====================================================
+       COMPANY IMPACT METRICS & HERITAGE STRIP
+       ===================================================== -->
+    <section
+      id="impact-stats"
+      class="relative bg-gradient-to-b from-slate-50/70 via-white to-[#F2F5FA] py-12 sm:py-14 border-t border-slate-200/80 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Centered Section Title (Matches Site-Wide Two-Tone Eyebrow System) -->
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-2.5 mb-3.5">
+            <span
+              class="px-3 py-1 rounded-md bg-[#ff6b35] text-white text-sm font-bold leading-none shadow-xs shadow-[#ff6b35]/30"
+              >Trusted</span
+            >
+            <span
+              class="text-slate-600 text-base sm:text-lg font-semibold tracking-tight"
+              >By Global Businesses</span
+            >
+          </div>
+
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-pt-navy tracking-tight leading-tight"
+          >
+            Numbers That Reflect
+            <span class="pt-text-gradient">Our Excellence</span>
+          </h2>
+        </div>
+
+        <!-- 4 Unique Metric Cards with Icons -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Metric 1: Years of Excellence -->
+          <div
+            class="group relative p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#04a9ff]/55 hover:shadow-xl hover:shadow-[#04a9ff]/15 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden"
+          >
+            <!-- Top Glow Line on Hover -->
+            <div
+              class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#04a9ff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+
+            <!-- Ambient Corner Light -->
+            <div
+              class="absolute -top-10 -right-10 w-28 h-28 bg-[#04a9ff]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            ></div>
+
+            <!-- Icon Row -->
+            <div class="flex items-center mb-4 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-sky-50 border border-[#04a9ff]/20 flex items-center justify-center text-[#04a9ff] text-xl group-hover:bg-[#04a9ff] group-hover:text-white group-hover:border-[#04a9ff] group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#04a9ff]/30 transition-all duration-300"
+              >
+                <i class="bi bi-award-fill"></i>
+              </div>
+            </div>
+
+            <!-- Number & Label -->
+            <div class="relative z-10">
+              <div
+                class="text-3xl sm:text-4xl font-extrabold text-[#0b1220] tracking-tight leading-none mb-1.5 group-hover:text-[#04a9ff] transition-colors duration-300"
+              >
+                10+
+              </div>
+              <div
+                class="text-xs font-bold uppercase tracking-wider text-slate-800"
+              >
+                Years of Excellence
+              </div>
+            </div>
+          </div>
+
+          <!-- Metric 2: Software Delivered -->
+          <div
+            class="group relative p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#04a9ff]/55 hover:shadow-xl hover:shadow-[#04a9ff]/15 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden"
+          >
+            <!-- Top Glow Line on Hover -->
+            <div
+              class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#04a9ff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+
+            <!-- Ambient Corner Light -->
+            <div
+              class="absolute -top-10 -right-10 w-28 h-28 bg-[#04a9ff]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            ></div>
+
+            <!-- Icon Row -->
+            <div class="flex items-center mb-4 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-sky-50 border border-[#04a9ff]/20 flex items-center justify-center text-[#04a9ff] text-xl group-hover:bg-gradient-to-br group-hover:from-[#04a9ff] group-hover:to-[#0070ba] group-hover:text-white group-hover:border-[#04a9ff] group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#04a9ff]/30 transition-all duration-300"
+              >
+                <i class="bi bi-rocket-takeoff-fill"></i>
+              </div>
+            </div>
+
+            <!-- Number & Label -->
+            <div class="relative z-10">
+              <div
+                class="text-3xl sm:text-4xl font-extrabold text-[#04a9ff] tracking-tight leading-none mb-1.5 group-hover:translate-x-0.5 transition-transform duration-300"
+              >
+                150+
+              </div>
+              <div
+                class="text-xs font-bold uppercase tracking-wider text-slate-800"
+              >
+                Software Delivered
+              </div>
+            </div>
+          </div>
+
+          <!-- Metric 3: Client Satisfaction -->
+          <div
+            class="group relative p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#ff6b35]/55 hover:shadow-xl hover:shadow-[#ff6b35]/15 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden"
+          >
+            <!-- Top Glow Line on Hover -->
+            <div
+              class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff6b35] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+
+            <!-- Ambient Corner Light -->
+            <div
+              class="absolute -top-10 -right-10 w-28 h-28 bg-[#ff6b35]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            ></div>
+
+            <!-- Icon Row -->
+            <div class="flex items-center mb-4 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-orange-50 border border-[#ff6b35]/20 flex items-center justify-center text-[#ff6b35] text-xl group-hover:bg-[#ff6b35] group-hover:text-white group-hover:border-[#ff6b35] group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#ff6b35]/30 transition-all duration-300"
+              >
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+
+            <!-- Number & Label -->
+            <div class="relative z-10">
+              <div
+                class="text-3xl sm:text-4xl font-extrabold text-[#ff6b35] tracking-tight leading-none mb-1.5 group-hover:translate-x-0.5 transition-transform duration-300"
+              >
+                99.4%
+              </div>
+              <div
+                class="text-xs font-bold uppercase tracking-wider text-slate-800"
+              >
+                Client Satisfaction
+              </div>
+            </div>
+          </div>
+
+          <!-- Metric 4: Global Offices -->
+          <div
+            class="group relative p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-[#0b1220]/40 hover:shadow-xl hover:shadow-slate-900/12 transition-all duration-300 hover:-translate-y-1.5 overflow-hidden"
+          >
+            <!-- Top Glow Line on Hover -->
+            <div
+              class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#0b1220] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+
+            <!-- Ambient Corner Light -->
+            <div
+              class="absolute -top-10 -right-10 w-28 h-28 bg-slate-900/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            ></div>
+
+            <!-- Icon Row -->
+            <div class="flex items-center mb-4 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200/80 flex items-center justify-center text-[#0b1220] text-xl group-hover:bg-[#0b1220] group-hover:text-white group-hover:border-[#0b1220] group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-slate-900/25 transition-all duration-300"
+              >
+                <i class="bi bi-globe-americas"></i>
+              </div>
+            </div>
+
+            <!-- Number & Label -->
+            <div class="relative z-10">
+              <div
+                class="text-3xl sm:text-4xl font-extrabold text-[#0b1220] tracking-tight leading-none mb-1.5 group-hover:text-[#04a9ff] transition-colors duration-300"
+              >
+                6+
+              </div>
+              <div
+                class="text-xs font-bold uppercase tracking-wider text-slate-800"
+              >
+                Global Offices
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- =====================================================
        ABOUT US / WHO WE ARE SECTION
@@ -1268,7 +1843,7 @@
 
             <p class="text-base sm:text-lg text-pt-muted leading-relaxed mt-3.5">
               From mission critical web platforms and mobile apps to custom
-              enterprise software we architect reliable systems tailored to your growth.
+              enterprise software we architect reliable systems tailored to your .
             </p>
           </div>
 
@@ -1718,6 +2293,378 @@
               </a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       INDUSTRIES WE SERVE SECTION (Interactive Split Showcase)
+       ===================================================== -->
+    <section
+      id="industries"
+      class="relative bg-[#F2F5FA] py-16 sm:py-20 lg:py-24 overflow-hidden border-t border-slate-200/80 scroll-mt-20"
+    >
+      <!-- Subtle Ambient Radial Gradient -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/75 via-[#F2F5FA] to-[#E9EEF6] pointer-events-none"
+      ></div>
+
+      <!-- Soft Brand Accent Glows -->
+      <div
+        class="absolute -top-24 -left-24 w-96 h-96 bg-[#04a9ff]/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute -bottom-24 -right-24 w-96 h-96 bg-[#ff6b35]/8 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Centered Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12 lg:mb-14">
+          <!-- Two-Tone Split Mark -->
+          <div class="inline-flex items-center gap-2.5 mb-4">
+            <span
+              class="px-3 py-1 rounded-md bg-[#04a9ff] text-white text-sm font-bold leading-none shadow-xs shadow-[#04a9ff]/30"
+              >Industries</span
+            >
+            <span
+              class="text-slate-600 text-base sm:text-lg font-semibold tracking-tight"
+              >We Serve</span
+            >
+          </div>
+
+          <h2
+            class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-pt-navy tracking-tight leading-[1.15]"
+          >
+            Domain-Driven Software for
+            <span class="pt-text-gradient">High-Growth Industries</span>
+          </h2>
+
+          <p class="text-base sm:text-lg text-pt-muted leading-relaxed mt-3.5">
+            We pair deep sector expertise with scalable engineering to build
+            compliant, resilient platforms tailored to your industry.
+          </p>
+        </div>
+
+        <!-- 6-Card Modern Split-Header Industries Grid (New UI Design, 2-Line Copy) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Industry 01: Healthcare -->
+          <a
+            href="#contact"
+            class="group relative rounded-3xl bg-white border border-slate-200/80 shadow-xs hover:shadow-2xl hover:shadow-[#04a9ff]/12 hover:border-[#04a9ff]/45 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+          >
+            <div
+              class="px-6 pt-6 pb-1.5 bg-gradient-to-b from-sky-50/85 via-sky-50/30 to-transparent flex items-center justify-between"
+            >
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-15 h-15 sm:w-16 sm:h-16 rounded-2xl bg-white border border-[#04a9ff]/25 text-[#04a9ff] shadow-sm p-2.5 flex items-center justify-center group-hover:bg-[#04a9ff] group-hover:text-white group-hover:scale-105 transition-all duration-300 shrink-0"
+                >
+                  <!-- Custom Line-Art SVG: Hospital Clinic & Heartbeat -->
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full" aria-hidden="true">
+                    <path d="M12 54V24h10M52 54V24H42M8 54h48" />
+                    <rect x="22" y="14" width="20" height="40" rx="2" />
+                    <path d="M29 22h6M32 19v6" />
+                    <rect x="27" y="42" width="10" height="12" rx="1" />
+                    <path d="M15 32h3M15 40h3M46 32h3M46 40h3" />
+                    <path d="M25 34h3l2-4 3 8 2-4h4" />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-bold uppercase tracking-widest text-[#04a9ff]"
+                    >MedTech</span
+                  >
+                  <h3
+                    class="text-lg sm:text-xl font-extrabold text-pt-navy tracking-tight group-hover:text-[#04a9ff] transition-colors"
+                  >
+                    Healthcare
+                  </h3>
+                </div>
+              </div>
+              <span
+                class="w-8 h-8 rounded-full bg-white border border-slate-200/80 text-slate-400 group-hover:bg-[#04a9ff] group-hover:border-[#04a9ff] group-hover:text-white flex items-center justify-center transition-all duration-300 shrink-0"
+              >
+                <i class="bi bi-arrow-up-right text-xs"></i>
+              </span>
+            </div>
+
+            <div class="px-6 pt-1.5 pb-6 relative">
+              <p class="text-sm text-pt-muted leading-relaxed line-clamp-2">
+                Patient portals, EHR integration, and connected clinic systems.
+              </p>
+            </div>
+
+            <span
+              class="h-1 w-full bg-gradient-to-r from-[#04a9ff] via-sky-400 to-cyan-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+            ></span>
+          </a>
+
+          <!-- Industry 02: Fintech -->
+          <a
+            href="#contact"
+            class="group relative rounded-3xl bg-white border border-slate-200/80 shadow-xs hover:shadow-2xl hover:shadow-[#ff6b35]/12 hover:border-[#ff6b35]/45 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+          >
+            <div
+              class="px-6 pt-6 pb-1.5 bg-gradient-to-b from-orange-50/85 via-orange-50/30 to-transparent flex items-center justify-between"
+            >
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-15 h-15 sm:w-16 sm:h-16 rounded-2xl bg-white border border-[#ff6b35]/25 text-[#ff6b35] shadow-sm p-2.5 flex items-center justify-center group-hover:bg-[#ff6b35] group-hover:text-white group-hover:scale-105 transition-all duration-300 shrink-0"
+                >
+                  <!-- Custom Line-Art SVG: Bank Building & Digital Coin -->
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full" aria-hidden="true">
+                    <polygon points="32,10 10,22 54,22" />
+                    <line x1="12" y1="26" x2="52" y2="26" />
+                    <line x1="17" y1="26" x2="17" y2="46" />
+                    <line x1="25" y1="26" x2="25" y2="46" />
+                    <line x1="33" y1="26" x2="33" y2="46" />
+                    <line x1="41" y1="26" x2="41" y2="46" />
+                    <path d="M10 46h32M8 52h36" />
+                    <circle cx="48" cy="44" r="9" fill="currentColor" fill-opacity="0.08" />
+                    <path d="M48 39v10M45.5 41.5c0-1 1.2-1.5 2.5-1.5s2.5.6 2.5 1.5-1 1.5-2.5 1.8-2.5.8-2.5 1.9 1.2 1.5 2.5 1.5 2.5-.5 2.5-1.5" />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-bold uppercase tracking-widest text-[#ff6b35]"
+                    >FinServ</span
+                  >
+                  <h3
+                    class="text-lg sm:text-xl font-extrabold text-pt-navy tracking-tight group-hover:text-[#ff6b35] transition-colors"
+                  >
+                    Fintech
+                  </h3>
+                </div>
+              </div>
+              <span
+                class="w-8 h-8 rounded-full bg-white border border-slate-200/80 text-slate-400 group-hover:bg-[#ff6b35] group-hover:border-[#ff6b35] group-hover:text-white flex items-center justify-center transition-all duration-300 shrink-0"
+              >
+                <i class="bi bi-arrow-up-right text-xs"></i>
+              </span>
+            </div>
+
+            <div class="px-6 pt-1.5 pb-6 relative">
+              <p class="text-sm text-pt-muted leading-relaxed line-clamp-2">
+                Secure banking apps, payment gateways, and fintech platforms.
+              </p>
+            </div>
+
+            <span
+              class="h-1 w-full bg-gradient-to-r from-[#ff6b35] via-orange-400 to-amber-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+            ></span>
+          </a>
+
+          <!-- Industry 03: E-commerce -->
+          <a
+            href="#contact"
+            class="group relative rounded-3xl bg-white border border-slate-200/80 shadow-xs hover:shadow-2xl hover:shadow-[#04a9ff]/12 hover:border-[#04a9ff]/45 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+          >
+            <div
+              class="px-6 pt-6 pb-1.5 bg-gradient-to-b from-sky-50/85 via-sky-50/30 to-transparent flex items-center justify-between"
+            >
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-15 h-15 sm:w-16 sm:h-16 rounded-2xl bg-white border border-[#04a9ff]/25 text-[#04a9ff] shadow-sm p-2.5 flex items-center justify-center group-hover:bg-[#04a9ff] group-hover:text-white group-hover:scale-105 transition-all duration-300 shrink-0"
+                >
+                  <!-- Custom Line-Art SVG: Storefront Awning & Shopping Bag -->
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full" aria-hidden="true">
+                    <path d="M12 24l4-10h32l4 10" />
+                    <path d="M12 24a4 4 0 0 0 8 0 4 4 0 0 0 8 0 4 4 0 0 0 8 0 4 4 0 0 0 8 0 4 4 0 0 0 8 0" />
+                    <path d="M16 28v24h20M48 28v8M10 52h28" />
+                    <rect x="21" y="34" width="10" height="10" rx="1" />
+                    <path d="M40 36h14l2 16H38l2-16z" />
+                    <path d="M43 36v-3a4 4 0 0 1 8 0v3" />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-bold uppercase tracking-widest text-[#04a9ff]"
+                    >RetailTech</span
+                  >
+                  <h3
+                    class="text-lg sm:text-xl font-extrabold text-pt-navy tracking-tight group-hover:text-[#04a9ff] transition-colors"
+                  >
+                    E-commerce
+                  </h3>
+                </div>
+              </div>
+              <span
+                class="w-8 h-8 rounded-full bg-white border border-slate-200/80 text-slate-400 group-hover:bg-[#04a9ff] group-hover:border-[#04a9ff] group-hover:text-white flex items-center justify-center transition-all duration-300 shrink-0"
+              >
+                <i class="bi bi-arrow-up-right text-xs"></i>
+              </span>
+            </div>
+
+            <div class="px-6 pt-1.5 pb-6 relative">
+              <p class="text-sm text-pt-muted leading-relaxed line-clamp-2">
+                High-converting stores, marketplaces, and real-time POS sync.
+              </p>
+            </div>
+
+            <span
+              class="h-1 w-full bg-gradient-to-r from-[#04a9ff] via-sky-400 to-cyan-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+            ></span>
+          </a>
+
+          <!-- Industry 04: Education -->
+          <a
+            href="#contact"
+            class="group relative rounded-3xl bg-white border border-slate-200/80 shadow-xs hover:shadow-2xl hover:shadow-[#ff6b35]/12 hover:border-[#ff6b35]/45 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+          >
+            <div
+              class="px-6 pt-6 pb-1.5 bg-gradient-to-b from-orange-50/85 via-orange-50/30 to-transparent flex items-center justify-between"
+            >
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-15 h-15 sm:w-16 sm:h-16 rounded-2xl bg-white border border-[#ff6b35]/25 text-[#ff6b35] shadow-sm p-2.5 flex items-center justify-center group-hover:bg-[#ff6b35] group-hover:text-white group-hover:scale-105 transition-all duration-300 shrink-0"
+                >
+                  <!-- Custom Line-Art SVG: University Campus & Graduation Cap -->
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full" aria-hidden="true">
+                    <polygon points="32,10 10,19 32,28 54,19" />
+                    <path d="M19 23v9c0 3 5.8 5.5 13 5.5s13-2.5 13-5.5v-9" />
+                    <path d="M52 20v12" />
+                    <path d="M12 43c6-2 13-1 20 3 7-4 14-5 20-3v11c-6-2-13-1-20 3-7-4-14-5-20-3V43z" />
+                    <line x1="32" y1="46" x2="32" y2="57" />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-bold uppercase tracking-widest text-[#ff6b35]"
+                    >EdTech</span
+                  >
+                  <h3
+                    class="text-lg sm:text-xl font-extrabold text-pt-navy tracking-tight group-hover:text-[#ff6b35] transition-colors"
+                  >
+                    Education
+                  </h3>
+                </div>
+              </div>
+              <span
+                class="w-8 h-8 rounded-full bg-white border border-slate-200/80 text-slate-400 group-hover:bg-[#ff6b35] group-hover:border-[#ff6b35] group-hover:text-white flex items-center justify-center transition-all duration-300 shrink-0"
+              >
+                <i class="bi bi-arrow-up-right text-xs"></i>
+              </span>
+            </div>
+
+            <div class="px-6 pt-1.5 pb-6 relative">
+              <p class="text-sm text-pt-muted leading-relaxed line-clamp-2">
+                Interactive LMS platforms, virtual classes, and campus portals.
+              </p>
+            </div>
+
+            <span
+              class="h-1 w-full bg-gradient-to-r from-[#ff6b35] via-orange-400 to-amber-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+            ></span>
+          </a>
+
+          <!-- Industry 05: Logistics -->
+          <a
+            href="#contact"
+            class="group relative rounded-3xl bg-white border border-slate-200/80 shadow-xs hover:shadow-2xl hover:shadow-[#04a9ff]/12 hover:border-[#04a9ff]/45 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+          >
+            <div
+              class="px-6 pt-6 pb-1.5 bg-gradient-to-b from-sky-50/85 via-sky-50/30 to-transparent flex items-center justify-between"
+            >
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-15 h-15 sm:w-16 sm:h-16 rounded-2xl bg-white border border-[#04a9ff]/25 text-[#04a9ff] shadow-sm p-2.5 flex items-center justify-center group-hover:bg-[#04a9ff] group-hover:text-white group-hover:scale-105 transition-all duration-300 shrink-0"
+                >
+                  <!-- Custom Line-Art SVG: Freight Truck & GPS Pin -->
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full" aria-hidden="true">
+                    <path d="M13 46H8V26a2 2 0 0 1 2-2h26v22H23" />
+                    <path d="M36 30h12l6 8v8h-3M41 46h-5" />
+                    <path d="M40 34h7l3 4h-10v-4z" />
+                    <circle cx="18" cy="48" r="5" />
+                    <circle cx="18" cy="48" r="1.5" fill="currentColor" />
+                    <circle cx="46" cy="48" r="5" />
+                    <circle cx="46" cy="48" r="1.5" fill="currentColor" />
+                    <path d="M16 31h12v8H16zM22 31v4" />
+                    <path d="M48 10a5 5 0 0 1 5 5c0 3.5-5 8-5 8s-5-4.5-5-8a5 5 0 0 1 5-5z" />
+                    <circle cx="48" cy="15" r="1.5" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-bold uppercase tracking-widest text-[#04a9ff]"
+                    >Supply Chain</span
+                  >
+                  <h3
+                    class="text-lg sm:text-xl font-extrabold text-pt-navy tracking-tight group-hover:text-[#04a9ff] transition-colors"
+                  >
+                    Logistics
+                  </h3>
+                </div>
+              </div>
+              <span
+                class="w-8 h-8 rounded-full bg-white border border-slate-200/80 text-slate-400 group-hover:bg-[#04a9ff] group-hover:border-[#04a9ff] group-hover:text-white flex items-center justify-center transition-all duration-300 shrink-0"
+              >
+                <i class="bi bi-arrow-up-right text-xs"></i>
+              </span>
+            </div>
+
+            <div class="px-6 pt-1.5 pb-6 relative">
+              <p class="text-sm text-pt-muted leading-relaxed line-clamp-2">
+                Live GPS fleet tracking, dispatch, and supply chain automation.
+              </p>
+            </div>
+
+            <span
+              class="h-1 w-full bg-gradient-to-r from-[#04a9ff] via-sky-400 to-cyan-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+            ></span>
+          </a>
+
+          <!-- Industry 06: Real Estate -->
+          <a
+            href="#contact"
+            class="group relative rounded-3xl bg-white border border-slate-200/80 shadow-xs hover:shadow-2xl hover:shadow-[#ff6b35]/12 hover:border-[#ff6b35]/45 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between"
+          >
+            <div
+              class="px-6 pt-6 pb-1.5 bg-gradient-to-b from-orange-50/85 via-orange-50/30 to-transparent flex items-center justify-between"
+            >
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-15 h-15 sm:w-16 sm:h-16 rounded-2xl bg-white border border-[#ff6b35]/25 text-[#ff6b35] shadow-sm p-2.5 flex items-center justify-center group-hover:bg-[#ff6b35] group-hover:text-white group-hover:scale-105 transition-all duration-300 shrink-0"
+                >
+                  <!-- Custom Line-Art SVG: Modern Property Tower & Home -->
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full" aria-hidden="true">
+                    <path d="M8 54h48" />
+                    <rect x="14" y="14" width="22" height="40" rx="1.5" />
+                    <path d="M19 20h4M27 20h4M19 27h4M27 27h4M19 34h4M27 34h4" />
+                    <rect x="22" y="44" width="6" height="10" />
+                    <path d="M36 34l10-8 10 8v20H36" />
+                    <rect x="43" y="42" width="6" height="12" />
+                    <circle cx="46" cy="36" r="1.5" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <span
+                    class="block text-[10px] font-bold uppercase tracking-widest text-[#ff6b35]"
+                    >PropTech</span
+                  >
+                  <h3
+                    class="text-lg sm:text-xl font-extrabold text-pt-navy tracking-tight group-hover:text-[#ff6b35] transition-colors"
+                  >
+                    Real Estate
+                  </h3>
+                </div>
+              </div>
+              <span
+                class="w-8 h-8 rounded-full bg-white border border-slate-200/80 text-slate-400 group-hover:bg-[#ff6b35] group-hover:border-[#ff6b35] group-hover:text-white flex items-center justify-center transition-all duration-300 shrink-0"
+              >
+                <i class="bi bi-arrow-up-right text-xs"></i>
+              </span>
+            </div>
+
+            <div class="px-6 pt-1.5 pb-6 relative">
+              <p class="text-sm text-pt-muted leading-relaxed line-clamp-2">
+                Property listing portals, broker CRMs, and asset management.
+              </p>
+            </div>
+
+            <span
+              class="h-1 w-full bg-gradient-to-r from-[#ff6b35] via-orange-400 to-amber-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+            ></span>
+          </a>
         </div>
       </div>
     </section>

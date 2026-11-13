@@ -559,7 +559,166 @@ html {
   animation: ptServiceReveal 0.35s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
-/* ---------- 9. Reduced Motion ---------- */
+/* ---------- 9. Hero Vector Scene Animations ---------- */
+@keyframes ptGearSpinCW {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ptGearSpinCCW {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes ptFloatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes ptFloatReverse {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes ptDashFlow {
+  to {
+    stroke-dashoffset: -52;
+  }
+}
+
+@keyframes ptBlobBreathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+
+@keyframes ptCodeShimmer {
+  0%,
+  100% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.pt-gear-cw {
+  animation: ptGearSpinCW 18s linear infinite;
+}
+
+.pt-gear-cw-fast {
+  animation: ptGearSpinCW 10s linear infinite;
+}
+
+.pt-gear-ccw {
+  animation: ptGearSpinCCW 13s linear infinite;
+}
+
+.pt-float-slow {
+  animation: ptFloatSlow 5.2s ease-in-out infinite;
+}
+
+.pt-float-reverse {
+  animation: ptFloatReverse 4.8s ease-in-out infinite;
+}
+
+.pt-badge-bob {
+  animation: ptFloatSlow 3.8s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.pt-dash-flow {
+  animation: ptDashFlow 3.2s linear infinite;
+}
+
+.pt-blob-breathe {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ptBlobBreathe 7s ease-in-out infinite;
+}
+
+.pt-code-pulse {
+  animation: ptCodeShimmer 2.8s ease-in-out infinite;
+}
+
+.pt-code-pulse-delay {
+  animation: ptCodeShimmer 2.8s ease-in-out infinite;
+  animation-delay: 1.1s;
+}
+
+@keyframes ptTechFloatA {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes ptTechFloatB {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(3px, 9px, 0);
+  }
+}
+
+@keyframes ptTechFloatC {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-3px, -8px, 0);
+  }
+}
+
+.pt-tech-float-a {
+  animation: ptTechFloatA 5.2s ease-in-out infinite;
+}
+
+.pt-tech-float-b {
+  animation: ptTechFloatB 6s ease-in-out infinite;
+}
+
+.pt-tech-float-c {
+  animation: ptTechFloatC 5.6s ease-in-out infinite;
+}
+
+.pt-tech-float-a:hover,
+.pt-tech-float-b:hover,
+.pt-tech-float-c:hover {
+  animation-play-state: paused;
+}
+
+/* ---------- 10. Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

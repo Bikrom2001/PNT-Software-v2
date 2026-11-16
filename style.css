@@ -15,9 +15,9 @@
   --pt-line: #e4eaf2;
   --pt-tint: #f0f9ff;
 
-  --pt-topbar-h: 40px;
-  --pt-nav-h: 76px;
-  --pt-logo-h: 36px;
+  --pt-topbar-h: 42px;
+  --pt-nav-h: 60px;
+  --pt-logo-h: 28px;
   --pt-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -82,7 +82,12 @@
 .pt-btn-cta {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(135deg, #ff6b35 0%, #ff783e 50%, #e9561f 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #ff6b35 0%,
+    #ff783e 50%,
+    #e9561f 100%
+  ) !important;
   color: #ffffff !important;
   box-shadow:
     0 4px 18px rgba(255, 107, 53, 0.4),
@@ -91,7 +96,12 @@
   text-decoration: none;
 }
 .pt-btn-cta:hover {
-  background: linear-gradient(135deg, #ff783e 0%, #ff6b35 50%, #d8450f 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #ff783e 0%,
+    #ff6b35 50%,
+    #d8450f 100%
+  ) !important;
   box-shadow:
     0 8px 28px rgba(255, 107, 53, 0.55),
     inset 0 1px 0 rgba(255, 255, 255, 0.45);
@@ -162,8 +172,8 @@ body {
 }
 
 .pt-header.is-scrolled {
-  --pt-nav-h: 66px;
-  --pt-logo-h: 31px;
+  --pt-nav-h: 52px;
+  --pt-logo-h: 25px;
   box-shadow: 0 8px 28px rgba(11, 18, 32, 0.08);
 }
 
@@ -185,8 +195,8 @@ body {
   display: inline-flex;
   align-items: center;
   height: 100%;
-  padding: 0 1.05rem;
-  font-size: 0.9rem;
+  padding: 0 0.95rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--pt-text);
   text-decoration: none;
@@ -559,6 +569,14 @@ html {
   animation: ptServiceReveal 0.35s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
+/* ---------- Blueprint Grid Pattern for Dark Hero Banner ---------- */
+.pt-blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
 /* ---------- 9. Hero Vector Scene Animations ---------- */
 @keyframes ptGearSpinCW {
   from {
@@ -718,7 +736,43 @@ html {
   animation-play-state: paused;
 }
 
-/* ---------- 10. Reduced Motion ---------- */
+/* ---------- 10. Infinite Auto-Slide Marquee ---------- */
+@keyframes ptMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.pt-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: ptMarqueeScroll 42s linear infinite;
+}
+
+.pt-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding-right: 1.75rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .pt-marquee-group {
+    gap: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.pt-marquee-container:hover .pt-marquee-track {
+  animation-play-state: paused;
+}
+
+/* ---------- 11. Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

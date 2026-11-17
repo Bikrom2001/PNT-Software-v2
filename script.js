@@ -265,4 +265,100 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+
+  /* --------------------------------------------------------
+     8. Technology Stack Category Filter
+     -------------------------------------------------------- */
+  const techTabs = document.querySelectorAll(".pt-tech-tab");
+  const techCards = document.querySelectorAll(".pt-tech-card");
+
+  if (techTabs.length && techCards.length) {
+    techTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const filter = tab.getAttribute("data-filter");
+
+        // Update active tab styling
+        techTabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        // Filter tech cards with smooth fade/scale
+        techCards.forEach((card) => {
+          const category = card.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            card.style.display = "flex";
+            requestAnimationFrame(() => {
+              card.style.opacity = "1";
+              card.style.transform = "scale(1)";
+            });
+          } else {
+            card.style.opacity = "0";
+            card.style.transform = "scale(0.95)";
+            setTimeout(() => {
+              if (tab.getAttribute("data-filter") !== "all" && card.getAttribute("data-category") !== tab.getAttribute("data-filter")) {
+                card.style.display = "none";
+              }
+            }, 200);
+          }
+        });
+      });
+    });
+  }
+
+  /* --------------------------------------------------------
+     9. Tech Ecosystem View Switcher & Interactive Circuit Hover
+     -------------------------------------------------------- */
+  const btnOrbitView = document.getElementById("btnOrbitView");
+  const btnGridView = document.getElementById("btnGridView");
+  const btnSwitchToGrid = document.getElementById("btnSwitchToGrid");
+  const orbitViewContainer = document.getElementById("orbitViewContainer");
+  const gridViewContainer = document.getElementById("gridViewContainer");
+
+  function switchToOrbit() {
+    if (!btnOrbitView || !btnGridView || !orbitViewContainer || !gridViewContainer) return;
+    btnOrbitView.classList.add("active");
+    btnGridView.classList.remove("active");
+    orbitViewContainer.classList.remove("hidden");
+    gridViewContainer.classList.add("hidden");
+  }
+
+  function switchToGrid() {
+    if (!btnOrbitView || !btnGridView || !orbitViewContainer || !gridViewContainer) return;
+    btnGridView.classList.add("active");
+    btnOrbitView.classList.remove("active");
+    orbitViewContainer.classList.add("hidden");
+    gridViewContainer.classList.remove("hidden");
+  }
+
+  if (btnOrbitView && btnGridView) {
+    btnOrbitView.addEventListener("click", switchToOrbit);
+    btnGridView.addEventListener("click", switchToGrid);
+  }
+
+  if (btnSwitchToGrid) {
+    btnSwitchToGrid.addEventListener("click", () => {
+      switchToGrid();
+      const techStackSec = document.getElementById("tech-stack");
+      if (techStackSec) {
+        techStackSec.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
+
+  // Interactive Circuit Line Highlighting on Node Hover
+  const orbitNodes = document.querySelectorAll(".pt-orbit-node");
+  if (orbitNodes.length) {
+    orbitNodes.forEach((node) => {
+      const trackId = node.getAttribute("data-circuit");
+      if (!trackId) return;
+      const trackEl = document.getElementById(trackId);
+      if (!trackEl) return;
+
+      node.addEventListener("mouseenter", () => {
+        trackEl.classList.add("pt-circuit-highlight");
+      });
+      node.addEventListener("mouseleave", () => {
+        trackEl.classList.remove("pt-circuit-highlight");
+      });
+    });
+  }
 });

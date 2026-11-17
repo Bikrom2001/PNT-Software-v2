@@ -885,27 +885,49 @@ html {
 }
 
 @keyframes ptOrbitFloat1 {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-7px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
 }
 @keyframes ptOrbitFloat2 {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(7px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(7px);
+  }
 }
 @keyframes ptOrbitFloat3 {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px) translateX(3px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px) translateX(3px);
+  }
 }
 @keyframes ptOrbitFloat4 {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(5px) translateX(-3px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px) translateX(-3px);
+  }
 }
 
 .pt-orbit-node {
   position: absolute;
   cursor: pointer;
   transform: translate(-50%, -50%);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), z-index 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    z-index 0.3s ease;
   z-index: 20;
 }
 .pt-orbit-node:hover {
@@ -913,34 +935,60 @@ html {
   z-index: 45 !important;
 }
 
-.pt-orbit-node-1 > div:first-child { animation: ptOrbitFloat1 5.4s ease-in-out infinite; }
-.pt-orbit-node-2 > div:first-child { animation: ptOrbitFloat2 6.2s ease-in-out infinite 0.7s; }
-.pt-orbit-node-3 > div:first-child { animation: ptOrbitFloat3 5.8s ease-in-out infinite 1.4s; }
-.pt-orbit-node-4 > div:first-child { animation: ptOrbitFloat4 6.6s ease-in-out infinite 2.1s; }
+.pt-orbit-node-1 > div:first-child {
+  animation: ptOrbitFloat1 5.4s ease-in-out infinite;
+}
+.pt-orbit-node-2 > div:first-child {
+  animation: ptOrbitFloat2 6.2s ease-in-out infinite 0.7s;
+}
+.pt-orbit-node-3 > div:first-child {
+  animation: ptOrbitFloat3 5.8s ease-in-out infinite 1.4s;
+}
+.pt-orbit-node-4 > div:first-child {
+  animation: ptOrbitFloat4 6.6s ease-in-out infinite 2.1s;
+}
 
 @keyframes ptRadarPulse {
-  0% { transform: scale(0.96); opacity: 0.55; }
-  50% { transform: scale(1.04); opacity: 0.2; }
-  100% { transform: scale(0.96); opacity: 0.55; }
+  0% {
+    transform: scale(0.96);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.96);
+    opacity: 0.55;
+  }
 }
 .pt-radar-ring-pulse {
   animation: ptRadarPulse 6s ease-in-out infinite;
 }
 
 @keyframes ptSpinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .pt-spin-slow {
   animation: ptSpinSlow 90s linear infinite;
 }
 
 @keyframes ptCenterHubGlow {
-  0%, 100% {
-    box-shadow: 0 0 24px rgba(4, 169, 255, 0.5), 0 0 48px rgba(99, 102, 241, 0.3);
+  0%,
+  100% {
+    box-shadow:
+      0 0 24px rgba(4, 169, 255, 0.5),
+      0 0 48px rgba(99, 102, 241, 0.3);
   }
   50% {
-    box-shadow: 0 0 38px rgba(4, 169, 255, 0.8), 0 0 64px rgba(99, 102, 241, 0.5);
+    box-shadow:
+      0 0 38px rgba(4, 169, 255, 0.8),
+      0 0 64px rgba(99, 102, 241, 0.5);
   }
 }
 .pt-center-hub {
@@ -999,7 +1047,27 @@ html {
   animation: ptCircuitPulse 3.8s linear infinite;
 }
 
-/* ---------- 15. Reduced Motion ---------- */
+/* ---------- 15. Our Work Flow Section (Stepped Pathway) ---------- */
+.pt-step-box {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pt-step-box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(4, 169, 255, 0.35) !important;
+  box-shadow: 0 20px 45px rgba(4, 169, 255, 0.12) !important;
+}
+
+.pt-workflow-card {
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pt-workflow-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(4, 169, 255, 0.6) !important;
+  box-shadow: 0 20px 40px rgba(4, 169, 255, 0.12) !important;
+}
+
+/* ---------- 16. Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

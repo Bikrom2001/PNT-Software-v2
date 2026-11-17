@@ -229,4 +229,40 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  /* --------------------------------------------------------
+     7. Swiper Slider for Products (7 Products)
+     -------------------------------------------------------- */
+  if (typeof Swiper !== "undefined" && document.querySelector(".pt-products-swiper")) {
+    new Swiper(".pt-products-swiper", {
+      slidesPerView: 1.1,
+      spaceBetween: 18,
+      grabCursor: true,
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      navigation: {
+        nextEl: "#productSliderNext",
+        prevEl: "#productSliderPrev",
+      },
+      pagination: {
+        el: "#productSliderPagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 22,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 26,
+        },
+      },
+    });
+  }
 });

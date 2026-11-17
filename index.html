@@ -39,6 +39,12 @@
 
     <!-- Header & Navigation Styles -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Swiper 11 Slider CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body class="bg-white text-pt-text font-sans antialiased min-h-screen">
     <!-- =====================================================
@@ -424,7 +430,7 @@
 
             <!-- Portfolio -->
             <li class="h-full flex items-center">
-              <a href="#" class="pt-nav-link">Portfolio</a>
+              <a href="#portfolio" class="pt-nav-link">Portfolio</a>
             </li>
 
             <!-- About (Small Dropdown) -->
@@ -642,7 +648,7 @@
           <!-- Mobile: Portfolio -->
           <div class="py-3">
             <a
-              href="#"
+              href="#portfolio"
               class="pt-mobile-link text-base font-semibold text-pt-navy hover:text-pt-blue-ink block"
               >Portfolio</a
             >
@@ -2326,6 +2332,426 @@
     </section>
 
     <!-- =====================================================
+       PORTFOLIO / READY SOFTWARE PRODUCTS SECTION (Enterprise SaaS UI Slider)
+       ===================================================== -->
+    <section
+      id="portfolio"
+      class="relative bg-[#F8FBFF] py-16 sm:py-20 lg:py-24 overflow-hidden border-t border-slate-200/80 scroll-mt-20"
+    >
+      <!-- Subtle Ambient Brand Glows -->
+      <div
+        class="absolute -top-24 -right-24 w-96 h-96 bg-[#04a9ff]/8 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute -bottom-24 -left-24 w-96 h-96 bg-[#ff6b35]/6 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Split Section Header with Swiper Navigation Arrows on Right -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
+          <div class="max-w-2xl">
+            <!-- Two-Tone Split Eyebrow Mark -->
+            <div class="inline-flex items-center gap-2.5 mb-3.5">
+              <span
+                class="px-3 py-1 rounded-md bg-[#04a9ff] text-white text-sm font-bold leading-none shadow-xs shadow-[#04a9ff]/30"
+                >Portfolio</span
+              >
+              <span
+                class="text-slate-600 text-base sm:text-lg font-semibold tracking-tight"
+                >Our Products</span
+              >
+            </div>
+
+            <h2
+              class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-pt-navy tracking-tight leading-[1.15]"
+            >
+              Enterprise-Grade <span class="pt-text-gradient">Ready Software Platforms</span>
+            </h2>
+
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed mt-3">
+              Explore our proven, market-tested software products engineered to automate operational workflows, eliminate manual friction, and accelerate business growth.
+            </p>
+          </div>
+
+          <!-- Swiper Navigation Arrows (Top-Right on Desktop, Touch-Swipeable Everywhere) -->
+          <div class="flex items-center gap-3 shrink-0 self-start md:self-end">
+            <button
+              type="button"
+              id="productSliderPrev"
+              class="w-11 h-11 rounded-full bg-white border border-slate-200/90 text-slate-700 hover:bg-[#04a9ff] hover:text-white hover:border-[#04a9ff] shadow-xs hover:shadow-md hover:shadow-[#04a9ff]/25 active:scale-95 transition-all duration-300 flex items-center justify-center cursor-pointer"
+              aria-label="Previous Slide"
+            >
+              <i class="bi bi-chevron-left text-base"></i>
+            </button>
+            <button
+              type="button"
+              id="productSliderNext"
+              class="w-11 h-11 rounded-full bg-[#04a9ff] text-white border border-[#04a9ff] hover:bg-[#0096e6] shadow-md shadow-[#04a9ff]/25 hover:shadow-lg hover:shadow-[#04a9ff]/35 active:scale-95 transition-all duration-300 flex items-center justify-center cursor-pointer"
+              aria-label="Next Slide"
+            >
+              <i class="bi bi-chevron-right text-base"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Swiper Slider Container (3 SaaS Cards Per View on Desktop) -->
+        <div class="swiper pt-products-swiper pt-6 px-1.5 -mt-6 -mb-4">
+          <div class="swiper-wrapper items-stretch">
+
+            <!-- Product 01: Inventory Management System -->
+            <div class="swiper-slide h-auto flex">
+              <div
+                class="group relative w-full h-[340px] sm:h-[370px] lg:h-[380px] rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs hover:shadow-[0_16px_36px_rgba(4,169,255,0.14)] hover:border-[#04a9ff]/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col justify-between"
+              >
+                <!-- Full-Bleed Background Image -->
+                <img
+                  src="assets/Image/Products/inventory.webp"
+                  alt="Inventory Management System"
+                  class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+
+                <!-- Ambient Vignette Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35 pointer-events-none group-hover:opacity-90 transition-opacity duration-300"
+                ></div>
+
+                <!-- Top-Left Floating Badge (Hover Reveal) -->
+                <div class="relative z-10 p-4 sm:p-5 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/45 backdrop-blur-md text-white/95 text-xs font-semibold border border-white/20 shadow-xs"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Multi-Warehouse</span>
+                  </span>
+                </div>
+
+                <!-- Bottom Floating Glassmorphism Pill Capsule -->
+                <div class="relative z-10 p-3.5 sm:p-4">
+                  <div
+                    class="rounded-2xl bg-white/95 backdrop-blur-md border border-white/80 p-3.5 sm:p-4 shadow-lg shadow-black/15 flex items-center justify-between gap-3 group-hover:bg-white group-hover:shadow-xl transition-all duration-300"
+                  >
+                    <div class="min-w-0 pr-1">
+                      <span
+                        class="block text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#04a9ff] mb-0.5 truncate"
+                      >
+                        SUPPLY CHAIN &amp; INVENTORY
+                      </span>
+                      <h3
+                        class="text-sm sm:text-base font-extrabold text-[#0b1220] tracking-tight group-hover:text-[#04a9ff] transition-colors leading-snug truncate"
+                      >
+                        Inventory Management System
+                      </h3>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#04a9ff] hover:bg-[#0096e6] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#04a9ff]/30 group-hover:scale-110 group-hover:rotate-45 transition-all duration-300"
+                      aria-label="Explore Inventory Management System"
+                    >
+                      <i class="bi bi-arrow-up-right text-xs sm:text-sm font-bold"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 02: School Management Software -->
+            <div class="swiper-slide h-auto flex">
+              <div
+                class="group relative w-full h-[340px] sm:h-[370px] lg:h-[380px] rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs hover:shadow-[0_16px_36px_rgba(4,169,255,0.14)] hover:border-[#04a9ff]/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col justify-between"
+              >
+                <!-- Full-Bleed Background Image -->
+                <img
+                  src="assets/Image/Products/SMC.jpg"
+                  alt="School Management Software"
+                  class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+
+                <!-- Ambient Vignette Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35 pointer-events-none group-hover:opacity-90 transition-opacity duration-300"
+                ></div>
+
+                <!-- Top-Left Floating Badge (Hover Reveal) -->
+                <div class="relative z-10 p-4 sm:p-5 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/45 backdrop-blur-md text-white/95 text-xs font-semibold border border-white/20 shadow-xs"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Campus Cloud Suite</span>
+                  </span>
+                </div>
+
+                <!-- Bottom Floating Glassmorphism Pill Capsule -->
+                <div class="relative z-10 p-3.5 sm:p-4">
+                  <div
+                    class="rounded-2xl bg-white/95 backdrop-blur-md border border-white/80 p-3.5 sm:p-4 shadow-lg shadow-black/15 flex items-center justify-between gap-3 group-hover:bg-white group-hover:shadow-xl transition-all duration-300"
+                  >
+                    <div class="min-w-0 pr-1">
+                      <span
+                        class="block text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#04a9ff] mb-0.5 truncate"
+                      >
+                        CAMPUS &amp; EDUCATION ERP
+                      </span>
+                      <h3
+                        class="text-sm sm:text-base font-extrabold text-[#0b1220] tracking-tight group-hover:text-[#04a9ff] transition-colors leading-snug truncate"
+                      >
+                        School Management Software
+                      </h3>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#04a9ff] hover:bg-[#0096e6] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#04a9ff]/30 group-hover:scale-110 group-hover:rotate-45 transition-all duration-300"
+                      aria-label="Explore School Management Software"
+                    >
+                      <i class="bi bi-arrow-up-right text-xs sm:text-sm font-bold"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 03: Retail POS Software -->
+            <div class="swiper-slide h-auto flex">
+              <div
+                class="group relative w-full h-[340px] sm:h-[370px] lg:h-[380px] rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs hover:shadow-[0_16px_36px_rgba(4,169,255,0.14)] hover:border-[#04a9ff]/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col justify-between"
+              >
+                <!-- Full-Bleed Background Image -->
+                <img
+                  src="assets/Image/Products/pos.webp"
+                  alt="Retail POS Software"
+                  class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+
+                <!-- Ambient Vignette Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35 pointer-events-none group-hover:opacity-90 transition-opacity duration-300"
+                ></div>
+
+                <!-- Top-Left Floating Badge (Hover Reveal) -->
+                <div class="relative z-10 p-4 sm:p-5 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/45 backdrop-blur-md text-white/95 text-xs font-semibold border border-white/20 shadow-xs"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Instant 0.4s Scan</span>
+                  </span>
+                </div>
+
+                <!-- Bottom Floating Glassmorphism Pill Capsule -->
+                <div class="relative z-10 p-3.5 sm:p-4">
+                  <div
+                    class="rounded-2xl bg-white/95 backdrop-blur-md border border-white/80 p-3.5 sm:p-4 shadow-lg shadow-black/15 flex items-center justify-between gap-3 group-hover:bg-white group-hover:shadow-xl transition-all duration-300"
+                  >
+                    <div class="min-w-0 pr-1">
+                      <span
+                        class="block text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#04a9ff] mb-0.5 truncate"
+                      >
+                        RETAIL &amp; POINT OF SALE
+                      </span>
+                      <h3
+                        class="text-sm sm:text-base font-extrabold text-[#0b1220] tracking-tight group-hover:text-[#04a9ff] transition-colors leading-snug truncate"
+                      >
+                        Retail POS Software
+                      </h3>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#04a9ff] hover:bg-[#0096e6] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#04a9ff]/30 group-hover:scale-110 group-hover:rotate-45 transition-all duration-300"
+                      aria-label="Explore Retail POS Software"
+                    >
+                      <i class="bi bi-arrow-up-right text-xs sm:text-sm font-bold"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 04: eCommerce Platform -->
+            <div class="swiper-slide h-auto flex">
+              <div
+                class="group relative w-full h-[340px] sm:h-[370px] lg:h-[380px] rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs hover:shadow-[0_16px_36px_rgba(4,169,255,0.14)] hover:border-[#04a9ff]/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col justify-between"
+              >
+                <!-- Full-Bleed Background Image -->
+                <img
+                  src="assets/Image/Products/ecommerce.webp"
+                  alt="eCommerce Platform"
+                  class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+
+                <!-- Ambient Vignette Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35 pointer-events-none group-hover:opacity-90 transition-opacity duration-300"
+                ></div>
+
+                <!-- Top-Left Floating Badge (Hover Reveal) -->
+                <div class="relative z-10 p-4 sm:p-5 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/45 backdrop-blur-md text-white/95 text-xs font-semibold border border-white/20 shadow-xs"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Multi-Vendor Ready</span>
+                  </span>
+                </div>
+
+                <!-- Bottom Floating Glassmorphism Pill Capsule -->
+                <div class="relative z-10 p-3.5 sm:p-4">
+                  <div
+                    class="rounded-2xl bg-white/95 backdrop-blur-md border border-white/80 p-3.5 sm:p-4 shadow-lg shadow-black/15 flex items-center justify-between gap-3 group-hover:bg-white group-hover:shadow-xl transition-all duration-300"
+                  >
+                    <div class="min-w-0 pr-1">
+                      <span
+                        class="block text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#04a9ff] mb-0.5 truncate"
+                      >
+                        ECOMMERCE &amp; RETAIL
+                      </span>
+                      <h3
+                        class="text-sm sm:text-base font-extrabold text-[#0b1220] tracking-tight group-hover:text-[#04a9ff] transition-colors leading-snug truncate"
+                      >
+                        eCommerce Platform
+                      </h3>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#04a9ff] hover:bg-[#0096e6] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#04a9ff]/30 group-hover:scale-110 group-hover:rotate-45 transition-all duration-300"
+                      aria-label="Explore eCommerce Platform"
+                    >
+                      <i class="bi bi-arrow-up-right text-xs sm:text-sm font-bold"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 05: CRM System -->
+            <div class="swiper-slide h-auto flex">
+              <div
+                class="group relative w-full h-[340px] sm:h-[370px] lg:h-[380px] rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs hover:shadow-[0_16px_36px_rgba(4,169,255,0.14)] hover:border-[#04a9ff]/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col justify-between"
+              >
+                <!-- Full-Bleed Background Image -->
+                <img
+                  src="assets/Image/Products/crm.webp"
+                  alt="CRM System"
+                  class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+
+                <!-- Ambient Vignette Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35 pointer-events-none group-hover:opacity-90 transition-opacity duration-300"
+                ></div>
+
+                <!-- Top-Left Floating Badge (Hover Reveal) -->
+                <div class="relative z-10 p-4 sm:p-5 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/45 backdrop-blur-md text-white/95 text-xs font-semibold border border-white/20 shadow-xs"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Lead Automation</span>
+                  </span>
+                </div>
+
+                <!-- Bottom Floating Glassmorphism Pill Capsule -->
+                <div class="relative z-10 p-3.5 sm:p-4">
+                  <div
+                    class="rounded-2xl bg-white/95 backdrop-blur-md border border-white/80 p-3.5 sm:p-4 shadow-lg shadow-black/15 flex items-center justify-between gap-3 group-hover:bg-white group-hover:shadow-xl transition-all duration-300"
+                  >
+                    <div class="min-w-0 pr-1">
+                      <span
+                        class="block text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#04a9ff] mb-0.5 truncate"
+                      >
+                        SALES &amp; CRM OPERATIONS
+                      </span>
+                      <h3
+                        class="text-sm sm:text-base font-extrabold text-[#0b1220] tracking-tight group-hover:text-[#04a9ff] transition-colors leading-snug truncate"
+                      >
+                        CRM System
+                      </h3>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#04a9ff] hover:bg-[#0096e6] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#04a9ff]/30 group-hover:scale-110 group-hover:rotate-45 transition-all duration-300"
+                      aria-label="Explore CRM System"
+                    >
+                      <i class="bi bi-arrow-up-right text-xs sm:text-sm font-bold"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 06: Learning Management System (LMS) -->
+            <div class="swiper-slide h-auto flex">
+              <div
+                class="group relative w-full h-[340px] sm:h-[370px] lg:h-[380px] rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs hover:shadow-[0_16px_36px_rgba(4,169,255,0.14)] hover:border-[#04a9ff]/50 hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col justify-between"
+              >
+                <!-- Full-Bleed Background Image -->
+                <img
+                  src="assets/Image/Products/LMS-2.jpg"
+                  alt="Learning Management System (LMS)"
+                  class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+
+                <!-- Ambient Vignette Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35 pointer-events-none group-hover:opacity-90 transition-opacity duration-300"
+                ></div>
+
+                <!-- Top-Left Floating Badge (Hover Reveal) -->
+                <div class="relative z-10 p-4 sm:p-5 opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/45 backdrop-blur-md text-white/95 text-xs font-semibold border border-white/20 shadow-xs"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Interactive LMS</span>
+                  </span>
+                </div>
+
+                <!-- Bottom Floating Glassmorphism Pill Capsule -->
+                <div class="relative z-10 p-3.5 sm:p-4">
+                  <div
+                    class="rounded-2xl bg-white/95 backdrop-blur-md border border-white/80 p-3.5 sm:p-4 shadow-lg shadow-black/15 flex items-center justify-between gap-3 group-hover:bg-white group-hover:shadow-xl transition-all duration-300"
+                  >
+                    <div class="min-w-0 pr-1">
+                      <span
+                        class="block text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#04a9ff] mb-0.5 truncate"
+                      >
+                        E-LEARNING &amp; EDTECH
+                      </span>
+                      <h3
+                        class="text-sm sm:text-base font-extrabold text-[#0b1220] tracking-tight group-hover:text-[#04a9ff] transition-colors leading-snug truncate"
+                      >
+                        Learning Management System (LMS)
+                      </h3>
+                    </div>
+                    <a
+                      href="#contact"
+                      class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#04a9ff] hover:bg-[#0096e6] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#04a9ff]/30 group-hover:scale-110 group-hover:rotate-45 transition-all duration-300"
+                      aria-label="Explore Learning Management System (LMS)"
+                    >
+                      <i class="bi bi-arrow-up-right text-xs sm:text-sm font-bold"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Custom Swiper Pagination Indicator (Pill & Dots Matching Design) -->
+        <div
+          id="productSliderPagination"
+          class="swiper-pagination"
+        ></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
        [COMMENTED OUT] ABOUT US / WHO WE ARE SECTION
        =====================================================
 <!- - =====================================================
@@ -2774,6 +3200,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Swiper 11 Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Interactive Navigation Script -->
     <script src="script.js"></script>

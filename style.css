@@ -1067,7 +1067,29 @@ html {
   box-shadow: 0 20px 40px rgba(4, 169, 255, 0.12) !important;
 }
 
-/* ---------- 16. Reduced Motion ---------- */
+/* ---------- 16. Testimonials & User Stories Section (Modern 3-Column Layout) ---------- */
+#pntHeroCard {
+  transition: background 0.6s ease, box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#pntHeroCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 48px rgba(12, 90, 69, 0.28);
+}
+
+#pntHeroImg {
+  transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#pntHeroCard:hover #pntHeroImg {
+  transform: scale(1.04);
+}
+
+#pntHeroQuote {
+  transition: opacity 0.25s ease;
+}
+
+
+
+/* ---------- 17. Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

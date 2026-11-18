@@ -267,6 +267,55 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* --------------------------------------------------------
+     7b. Testimonials & Client Stories Center Hero Slider
+     (Pure HTML-Driven: Reads all .pnt-hero-slide elements from index.html)
+     -------------------------------------------------------- */
+  (function initUserStories() {
+    const slides = document.querySelectorAll(".pnt-hero-slide");
+    const prevBtn = document.getElementById("pntStoryPrev");
+    const nextBtn = document.getElementById("pntStoryNext");
+    const progressBar = document.getElementById("pntStoryProgress");
+
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove("opacity-0", "pointer-events-none", "z-0");
+          slide.classList.add("opacity-100", "pointer-events-auto", "z-10");
+        } else {
+          slide.classList.remove("opacity-100", "pointer-events-auto", "z-10");
+          slide.classList.add("opacity-0", "pointer-events-none", "z-0");
+        }
+      });
+
+      if (progressBar) {
+        const pct = ((index + 1) / slides.length) * 100;
+        progressBar.style.width = pct + "%";
+      }
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      });
+    }
+
+    // Initialize first slide as active
+    showSlide(0);
+  })();
+
+  /* --------------------------------------------------------
      8. Technology Stack Category Filter
      -------------------------------------------------------- */
   const techTabs = document.querySelectorAll(".pt-tech-tab");
@@ -361,4 +410,34 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  
+  
+  /* --------------------------------------------------------
+     Simple Contact Form Submission Handler
+     -------------------------------------------------------- */
+  const contactForm = document.getElementById("pntContactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById("contactSubmitBtn");
+      const successMsg = document.getElementById("contactSuccessMsg");
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending...</span> <i class="bi bi-hourglass-split animate-spin"></i>';
+      }
+
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.classList.add("hidden");
+        }
+        if (successMsg) {
+          successMsg.classList.remove("hidden");
+        }
+        contactForm.reset();
+      }, 800);
+    });
+  }
+
 });
